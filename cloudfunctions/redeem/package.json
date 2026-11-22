@@ -1,0 +1,10 @@
+{
+  "name": "redeem",
+  "version": "0.1.0",
+  "private": true,
+  "description": "咪咪色彩英语网页版：兑换码校验 + 会员集临时播放链接",
+  "main": "index.js",
+  "dependencies": {
+    "@cloudbase/node-sdk": "~4.2.1"
+  }
+}

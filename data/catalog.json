@@ -1,0 +1,2971 @@
+{
+  "version": "2026-11-20T12:12:13Z",
+  "hash": "3146bc375965d6e9",
+  "series": [
+    {
+      "id": "mimi-songs",
+      "title": "Mimi 色彩英语",
+      "host": "小猫画家 Mimi",
+      "desc": "唱着儿歌认颜色、学英语",
+      "hex": "#E8352E",
+      "status": "live",
+      "unit": "集",
+      "avatar": ""
+    },
+    {
+      "id": "wanzhuan-secai",
+      "title": "玩转色彩",
+      "host": "颜色实验",
+      "desc": "动手调颜料，看颜色怎么变",
+      "hex": "#F07B1F",
+      "status": "live",
+      "unit": "课",
+      "avatar": ""
+    }
+  ],
+  "episodes": [
+    {
+      "id": "01-red",
+      "series": "mimi-songs",
+      "unit": "集",
+      "no": 1,
+      "color": {
+        "en": "Red",
+        "zh": "红色",
+        "hex": "#E8352E"
+      },
+      "title": {
+        "en": "Red, Red, I See Red",
+        "zh": "红色红色我看到红色"
+      },
+      "landscape": false,
+      "duration": 49.584,
+      "video": "episodes/01-red/red_episode1_final.mp4",
+      "videoWide": "episodes/01-red/red_episode1_final_wide.mp4",
+      "audio": "episodes/01-red/song/song_pro_v6.mp3",
+      "cover": "episodes/01-red/thumbs/frame02.jpg",
+      "poster": "episodes/01-red/storyboard/frame02.jpg",
+      "lyrics": [
+        {
+          "start": 1.6,
+          "end": 7.3,
+          "en": "Red! Red!",
+          "zh": "红色！"
+        },
+        {
+          "start": 7.6,
+          "end": 10.6,
+          "en": "Red, red, I see red!",
+          "zh": "红色红色，我看到红色！"
+        },
+        {
+          "start": 10.6,
+          "end": 14.1,
+          "en": "Red, red, I see red!",
+          "zh": "红色红色，我看到红色！"
+        },
+        {
+          "start": 14.2,
+          "end": 17.5,
+          "en": "Apple, apple, red apple!",
+          "zh": "红红的苹果，苹果！"
+        },
+        {
+          "start": 17.5,
+          "end": 20.6,
+          "en": "Apple, apple, red apple!",
+          "zh": "红红的苹果，苹果！"
+        },
+        {
+          "start": 20.6,
+          "end": 24.5,
+          "en": "Sun, sun, red sun!",
+          "zh": "红红的太阳，太阳！"
+        },
+        {
+          "start": 24.5,
+          "end": 27.6,
+          "en": "Sun, sun, red sun!",
+          "zh": "红红的太阳，太阳！"
+        },
+        {
+          "start": 27.5,
+          "end": 31.75,
+          "en": "Fire truck, fire truck, nee-naw!",
+          "zh": "红红的消防车，嘀嘟！"
+        },
+        {
+          "start": 31.75,
+          "end": 34.4,
+          "en": "Fire truck, nee-naw!",
+          "zh": "红红的消防车，嘀嘟！"
+        },
+        {
+          "start": 34.5,
+          "end": 37.9,
+          "en": "Red, red, I see red!",
+          "zh": "红色红色，我看到红色！"
+        },
+        {
+          "start": 37.9,
+          "end": 42.0,
+          "en": "Red, red, I see red!",
+          "zh": "红色红色，我看到红色！"
+        },
+        {
+          "start": 42.7,
+          "end": 45.2,
+          "en": "What color? RED!",
+          "zh": "什么颜色？红色！"
+        },
+        {
+          "start": 45.2,
+          "end": 49.4,
+          "en": "What color? RED!",
+          "zh": "什么颜色？红色！"
+        }
+      ],
+      "words": [
+        {
+          "en": "apple",
+          "zh": "苹果",
+          "ipa": "/ˈæp.əl/",
+          "start": 13.98,
+          "end": 20.48,
+          "image": "episodes/01-red/thumbs/frame03.jpg"
+        },
+        {
+          "en": "sun",
+          "zh": "太阳",
+          "ipa": "/sʌn/",
+          "start": 20.48,
+          "end": 27.39,
+          "image": "episodes/01-red/thumbs/frame06.jpg"
+        },
+        {
+          "en": "fire truck",
+          "zh": "消防车",
+          "ipa": "/ˈfaɪər trʌk/",
+          "start": 27.39,
+          "end": 34.34,
+          "image": "episodes/01-red/thumbs/frame08.jpg"
+        }
+      ],
+      "spell": [
+        {
+          "w": "red",
+          "zh": "红色",
+          "image": "episodes/01-red/thumbs/frame02.jpg",
+          "start": 7.6,
+          "end": 10.6,
+          "lyric": "Red, red, I see red!"
+        },
+        {
+          "w": "apple",
+          "zh": "苹果",
+          "image": "episodes/01-red/thumbs/frame03.jpg",
+          "start": 13.98,
+          "end": 20.48,
+          "lyric": "Apple, apple, red apple!"
+        },
+        {
+          "w": "sun",
+          "zh": "太阳",
+          "image": "episodes/01-red/thumbs/frame06.jpg",
+          "start": 20.48,
+          "end": 27.39,
+          "lyric": "Sun, sun, red sun!"
+        }
+      ],
+      "game": true
+    },
+    {
+      "id": "02-yellow",
+      "series": "mimi-songs",
+      "unit": "集",
+      "no": 2,
+      "color": {
+        "en": "Yellow",
+        "zh": "黄色",
+        "hex": "#F5C518"
+      },
+      "title": {
+        "en": "Yellow, Hello!",
+        "zh": "黄色，你好！"
+      },
+      "landscape": true,
+      "duration": 131.664,
+      "video": "episodes/02-yellow/yellow_episode2_1080p_web.mp4",
+      "videoWide": "",
+      "audio": "episodes/02-yellow/song/song_yellow_v6.mp3",
+      "cover": "episodes/02-yellow/thumbs/frame01.jpg",
+      "poster": "episodes/02-yellow/storyboard/frame01.jpg",
+      "lyrics": [
+        {
+          "start": 19.7,
+          "end": 28.8,
+          "en": "Yellow, yellow, hello yellow!",
+          "zh": "黄色黄色，你好黄色！"
+        },
+        {
+          "start": 28.9,
+          "end": 37.4,
+          "en": "Yellow here, yellow there!",
+          "zh": "这里黄，那里黄！"
+        },
+        {
+          "start": 37.8,
+          "end": 48.0,
+          "en": "Banana, banana, yellow banana!",
+          "zh": "香蕉香蕉，黄香蕉！"
+        },
+        {
+          "start": 48.2,
+          "end": 55.6,
+          "en": "Lemon, lemon, sour lemon!",
+          "zh": "柠檬柠檬，酸柠檬！"
+        },
+        {
+          "start": 56.0,
+          "end": 64.8,
+          "en": "Yellow, yellow, hello yellow!",
+          "zh": "黄色黄色，你好黄色！"
+        },
+        {
+          "start": 64.9,
+          "end": 73.4,
+          "en": "Yellow here, yellow there!",
+          "zh": "这里黄，那里黄！"
+        },
+        {
+          "start": 73.9,
+          "end": 82.3,
+          "en": "Little chick, little chick, peep-peep-peep!",
+          "zh": "小鸡小鸡，叽叽叽！"
+        },
+        {
+          "start": 82.5,
+          "end": 91.2,
+          "en": "Sunflowers sway, sway, sway!",
+          "zh": "向日葵，摇呀摇！"
+        },
+        {
+          "start": 91.5,
+          "end": 99.7,
+          "en": "Yellow, yellow, hello yellow!",
+          "zh": "黄色黄色，你好黄色！"
+        },
+        {
+          "start": 99.9,
+          "end": 108.2,
+          "en": "Paint a little yellow chick!",
+          "zh": "画一只小黄鸡！"
+        },
+        {
+          "start": 108.5,
+          "end": 116.9,
+          "en": "Bye-bye, yellow!",
+          "zh": "黄色，再见！"
+        },
+        {
+          "start": 117.2,
+          "end": 121.1,
+          "en": "What color is it?",
+          "zh": "这是什么颜色？"
+        },
+        {
+          "start": 121.3,
+          "end": 131.4,
+          "en": "YELLOW!",
+          "zh": "黄色！"
+        }
+      ],
+      "words": [
+        {
+          "en": "banana",
+          "zh": "香蕉",
+          "ipa": "/bəˈnænə/",
+          "start": 37.8,
+          "end": 48.2,
+          "image": "episodes/02-yellow/thumbs/frame02.jpg"
+        },
+        {
+          "en": "lemon",
+          "zh": "柠檬",
+          "ipa": "/ˈlemən/",
+          "start": 48.2,
+          "end": 56.0,
+          "image": "episodes/02-yellow/thumbs/frame03.jpg"
+        },
+        {
+          "en": "chick",
+          "zh": "小鸡",
+          "ipa": "/tʃɪk/",
+          "start": 73.9,
+          "end": 82.5,
+          "image": "episodes/02-yellow/thumbs/frame04.jpg"
+        },
+        {
+          "en": "sunflower",
+          "zh": "向日葵",
+          "ipa": "/ˈsʌnˌflaʊər/",
+          "start": 82.5,
+          "end": 91.5,
+          "image": "episodes/02-yellow/thumbs/frame05.jpg"
+        }
+      ],
+      "spell": [
+        {
+          "w": "yellow",
+          "zh": "黄色",
+          "image": "episodes/02-yellow/thumbs/frame01.jpg",
+          "start": 19.7,
+          "end": 28.8,
+          "lyric": "Yellow, yellow, hello yellow!"
+        },
+        {
+          "w": "banana",
+          "zh": "香蕉",
+          "image": "episodes/02-yellow/thumbs/frame02.jpg",
+          "start": 37.8,
+          "end": 48.2,
+          "lyric": "Banana, banana, yellow banana!"
+        },
+        {
+          "w": "lemon",
+          "zh": "柠檬",
+          "image": "episodes/02-yellow/thumbs/frame03.jpg",
+          "start": 48.2,
+          "end": 56.0,
+          "lyric": "Lemon, lemon, sour lemon!"
+        },
+        {
+          "w": "chick",
+          "zh": "小鸡",
+          "image": "episodes/02-yellow/thumbs/frame04.jpg",
+          "start": 73.9,
+          "end": 82.5,
+          "lyric": "Little chick, little chick, peep-peep-peep!"
+        }
+      ],
+      "game": true
+    },
+    {
+      "id": "03-blue",
+      "series": "mimi-songs",
+      "unit": "集",
+      "no": 3,
+      "color": {
+        "en": "Blue",
+        "zh": "蓝色",
+        "hex": "#2F7DE1"
+      },
+      "title": {
+        "en": "Blue, Blue, I See Blue",
+        "zh": "蓝色蓝色我看到蓝色"
+      },
+      "landscape": false,
+      "duration": 52.375,
+      "video": "episodes/03-blue/blue_episode_final_nolag_web.mp4",
+      "videoWide": "",
+      "audio": "episodes/03-blue/song/I_See_Blue.mp3",
+      "cover": "episodes/03-blue/thumbs/frame01.jpg",
+      "poster": "episodes/03-blue/storyboard/frame01.jpg",
+      "lyrics": [
+        {
+          "start": 1.56,
+          "end": 5.6,
+          "en": "Blue! Blue! 蓝色!",
+          "zh": "蓝色！蓝色！"
+        },
+        {
+          "start": 6.0,
+          "end": 13.5,
+          "en": "Blue, blue, I see blue!",
+          "zh": "蓝色蓝色，我看到蓝色！"
+        },
+        {
+          "start": 13.56,
+          "end": 21.42,
+          "en": "Sky, sky, blue sky!",
+          "zh": "蓝蓝的天空，天空！"
+        },
+        {
+          "start": 21.42,
+          "end": 28.98,
+          "en": "Ocean, ocean, blue ocean!",
+          "zh": "蓝蓝的大海，大海！"
+        },
+        {
+          "start": 28.98,
+          "end": 36.72,
+          "en": "Blueberry, blueberry, yummy!",
+          "zh": "蓝蓝的蓝莓，好吃！"
+        },
+        {
+          "start": 36.72,
+          "end": 44.42,
+          "en": "Blue, blue, I see blue!",
+          "zh": "蓝色蓝色，我看到蓝色！"
+        },
+        {
+          "start": 44.68,
+          "end": 47.3,
+          "en": "What color? BLUE!",
+          "zh": "什么颜色？蓝色！"
+        },
+        {
+          "start": 47.98,
+          "end": 51.9,
+          "en": "What color? BLUE!",
+          "zh": "什么颜色？蓝色！"
+        }
+      ],
+      "words": [
+        {
+          "en": "sky",
+          "zh": "天空",
+          "ipa": "/skaɪ/",
+          "start": 13.56,
+          "end": 21.42,
+          "image": "episodes/03-blue/thumbs/frame02.jpg"
+        },
+        {
+          "en": "ocean",
+          "zh": "大海",
+          "ipa": "/ˈoʊ.ʃən/",
+          "start": 21.42,
+          "end": 28.98,
+          "image": "episodes/03-blue/thumbs/frame03.jpg"
+        },
+        {
+          "en": "blueberry",
+          "zh": "蓝莓",
+          "ipa": "/ˈbluːˌber.i/",
+          "start": 28.98,
+          "end": 36.72,
+          "image": "episodes/03-blue/thumbs/frame04.jpg"
+        }
+      ],
+      "spell": [
+        {
+          "w": "blue",
+          "zh": "蓝色",
+          "image": "episodes/03-blue/thumbs/frame01.jpg",
+          "start": 6.0,
+          "end": 13.5,
+          "lyric": "Blue, blue, I see blue!"
+        },
+        {
+          "w": "sky",
+          "zh": "天空",
+          "image": "episodes/03-blue/thumbs/frame02.jpg",
+          "start": 13.56,
+          "end": 21.42,
+          "lyric": "Sky, sky, blue sky!"
+        },
+        {
+          "w": "ocean",
+          "zh": "大海",
+          "image": "episodes/03-blue/thumbs/frame03.jpg",
+          "start": 21.42,
+          "end": 28.98,
+          "lyric": "Ocean, ocean, blue ocean!"
+        }
+      ],
+      "game": true
+    },
+    {
+      "id": "04-green",
+      "series": "mimi-songs",
+      "unit": "集",
+      "no": 4,
+      "color": {
+        "en": "Green",
+        "zh": "绿色",
+        "hex": "#3CB44B"
+      },
+      "title": {
+        "en": "Green, Green, I See Green",
+        "zh": "绿色绿色我看到绿色"
+      },
+      "landscape": false,
+      "duration": 50.04,
+      "video": "episodes/04-green/green_episode4_1080x1920_web.mp4",
+      "videoWide": "",
+      "audio": "episodes/04-green/song/green_v1.mp3",
+      "cover": "episodes/04-green/thumbs/frame01.jpg",
+      "poster": "episodes/04-green/storyboard/frame01.jpg",
+      "lyrics": [
+        {
+          "start": 1.62,
+          "end": 5.5,
+          "en": "Green! Green!",
+          "zh": "绿色！"
+        },
+        {
+          "start": 5.6,
+          "end": 8.5,
+          "en": "Green, green, I see green!",
+          "zh": "绿色绿色，我看到绿色！"
+        },
+        {
+          "start": 9.12,
+          "end": 12.4,
+          "en": "Green, green, I see green!",
+          "zh": "绿色绿色，我看到绿色！"
+        },
+        {
+          "start": 12.5,
+          "end": 14.8,
+          "en": "Frog, frog, green frog!",
+          "zh": "绿绿的青蛙，青蛙！"
+        },
+        {
+          "start": 15.84,
+          "end": 22.2,
+          "en": "Frog, frog, green frog!",
+          "zh": "绿绿的青蛙，青蛙！"
+        },
+        {
+          "start": 22.48,
+          "end": 29.4,
+          "en": "Leaf, leaf, green leaf!",
+          "zh": "绿绿的叶子，叶子！"
+        },
+        {
+          "start": 29.64,
+          "end": 36.2,
+          "en": "Turtle, turtle, slow turtle!",
+          "zh": "绿绿的乌龟，慢慢爬！"
+        },
+        {
+          "start": 36.4,
+          "end": 39.4,
+          "en": "Green, green, I see green!",
+          "zh": "绿色绿色，我看到绿色！"
+        },
+        {
+          "start": 39.9,
+          "end": 43.1,
+          "en": "Green, green, I see green!",
+          "zh": "绿色绿色，我看到绿色！"
+        },
+        {
+          "start": 43.22,
+          "end": 46.4,
+          "en": "Find it! What color? GREEN!",
+          "zh": "找一找！什么颜色？绿色！"
+        },
+        {
+          "start": 46.5,
+          "end": 50.0,
+          "en": "Find it! What color? GREEN!",
+          "zh": "找一找！什么颜色？绿色！"
+        }
+      ],
+      "words": [
+        {
+          "en": "frog",
+          "zh": "青蛙",
+          "ipa": "/frɑːɡ/",
+          "start": 12.5,
+          "end": 22.48,
+          "image": "episodes/04-green/thumbs/frame03.jpg"
+        },
+        {
+          "en": "leaf",
+          "zh": "叶子",
+          "ipa": "/liːf/",
+          "start": 22.48,
+          "end": 29.64,
+          "image": "episodes/04-green/thumbs/frame04.jpg"
+        },
+        {
+          "en": "turtle",
+          "zh": "乌龟",
+          "ipa": "/ˈtɜːr.tl/",
+          "start": 29.64,
+          "end": 36.4,
+          "image": "episodes/04-green/thumbs/frame05.jpg"
+        }
+      ],
+      "spell": [
+        {
+          "w": "green",
+          "zh": "绿色",
+          "image": "episodes/04-green/thumbs/frame01.jpg",
+          "start": 5.6,
+          "end": 8.5,
+          "lyric": "Green, green, I see green!"
+        },
+        {
+          "w": "frog",
+          "zh": "青蛙",
+          "image": "episodes/04-green/thumbs/frame03.jpg",
+          "start": 12.5,
+          "end": 22.48,
+          "lyric": "Frog, frog, green frog!"
+        },
+        {
+          "w": "leaf",
+          "zh": "叶子",
+          "image": "episodes/04-green/thumbs/frame04.jpg",
+          "start": 22.48,
+          "end": 29.64,
+          "lyric": "Leaf, leaf, green leaf!"
+        },
+        {
+          "w": "turtle",
+          "zh": "乌龟",
+          "image": "episodes/04-green/thumbs/frame05.jpg",
+          "start": 29.64,
+          "end": 36.4,
+          "lyric": "Turtle, turtle, slow turtle!"
+        }
+      ],
+      "game": true
+    },
+    {
+      "id": "05-orange",
+      "series": "mimi-songs",
+      "unit": "集",
+      "no": 5,
+      "color": {
+        "en": "Orange",
+        "zh": "橙色",
+        "hex": "#F08A2A"
+      },
+      "title": {
+        "en": "Orange, Orange, I See Orange",
+        "zh": "橙色橙色我看到橙色"
+      },
+      "landscape": false,
+      "duration": 52.824,
+      "video": "episodes/05-orange/orange_episode5_1080x1920_web.mp4",
+      "videoWide": "",
+      "audio": "episodes/05-orange/song/orange_v1.mp3",
+      "cover": "episodes/05-orange/thumbs/frame01.jpg",
+      "poster": "episodes/05-orange/storyboard/frame01.jpg",
+      "lyrics": [
+        {
+          "start": 4.04,
+          "end": 8.1,
+          "en": "Orange! Orange!",
+          "zh": "橙色！"
+        },
+        {
+          "start": 8.26,
+          "end": 11.6,
+          "en": "Orange, orange, I see orange!",
+          "zh": "橙色橙色，我看到橙色！"
+        },
+        {
+          "start": 12.0,
+          "end": 15.2,
+          "en": "Orange, orange, I see orange!",
+          "zh": "橙色橙色，我看到橙色！"
+        },
+        {
+          "start": 15.32,
+          "end": 21.5,
+          "en": "Orange, orange, juicy orange!",
+          "zh": "橙橙的橙子，橙子！"
+        },
+        {
+          "start": 21.66,
+          "end": 28.0,
+          "en": "Pumpkin, pumpkin, big pumpkin!",
+          "zh": "橙橙的南瓜，南瓜！"
+        },
+        {
+          "start": 28.14,
+          "end": 35.4,
+          "en": "Carrot, carrot, crunchy carrot!",
+          "zh": "橙橙的胡萝卜，胡萝卜！"
+        },
+        {
+          "start": 35.56,
+          "end": 38.2,
+          "en": "Orange, orange, I see orange!",
+          "zh": "橙色橙色，我看到橙色！"
+        },
+        {
+          "start": 38.3,
+          "end": 41.3,
+          "en": "Orange, orange, I see orange!",
+          "zh": "橙色橙色，我看到橙色！"
+        },
+        {
+          "start": 41.46,
+          "end": 45.2,
+          "en": "Count! One, two, three! ORANGE!",
+          "zh": "数一数！一，二，三！橙色！"
+        },
+        {
+          "start": 47.8,
+          "end": 51.2,
+          "en": "Count! One, two, three! ORANGE!",
+          "zh": "数一数！一，二，三！橙色！"
+        }
+      ],
+      "words": [
+        {
+          "en": "orange",
+          "zh": "橙子",
+          "ipa": "/ˈɔːr.ɪndʒ/",
+          "start": 15.32,
+          "end": 21.66,
+          "image": "episodes/05-orange/thumbs/frame03.jpg"
+        },
+        {
+          "en": "pumpkin",
+          "zh": "南瓜",
+          "ipa": "/ˈpʌmp.kɪn/",
+          "start": 21.66,
+          "end": 28.14,
+          "image": "episodes/05-orange/thumbs/frame04.jpg"
+        },
+        {
+          "en": "carrot",
+          "zh": "胡萝卜",
+          "ipa": "/ˈker.ət/",
+          "start": 28.14,
+          "end": 35.56,
+          "image": "episodes/05-orange/thumbs/frame05.jpg"
+        }
+      ],
+      "spell": [
+        {
+          "w": "orange",
+          "zh": "橙色",
+          "image": "episodes/05-orange/thumbs/frame01.jpg",
+          "start": 8.26,
+          "end": 11.6,
+          "lyric": "Orange, orange, I see orange!"
+        },
+        {
+          "w": "carrot",
+          "zh": "胡萝卜",
+          "image": "episodes/05-orange/thumbs/frame05.jpg",
+          "start": 28.14,
+          "end": 35.56,
+          "lyric": "Carrot, carrot, crunchy carrot!"
+        }
+      ],
+      "game": true
+    },
+    {
+      "id": "06-purple",
+      "series": "mimi-songs",
+      "unit": "集",
+      "no": 6,
+      "color": {
+        "en": "Purple",
+        "zh": "紫色",
+        "hex": "#8A5BB8"
+      },
+      "title": {
+        "en": "Purple, Purple, I See Purple",
+        "zh": "紫色紫色我看到紫色"
+      },
+      "landscape": false,
+      "duration": 51.192,
+      "video": "episodes/06-purple/purple_episode6_1080x1920_web.mp4",
+      "videoWide": "",
+      "audio": "episodes/06-purple/song/purple_v2.mp3",
+      "cover": "episodes/06-purple/thumbs/frame01.jpg",
+      "poster": "episodes/06-purple/storyboard/frame01.jpg",
+      "lyrics": [
+        {
+          "start": 3.84,
+          "end": 7.5,
+          "en": "Purple! Purple!",
+          "zh": "紫色！"
+        },
+        {
+          "start": 7.84,
+          "end": 11.3,
+          "en": "Purple, purple, I see purple!",
+          "zh": "紫色紫色，我看到紫色！"
+        },
+        {
+          "start": 11.38,
+          "end": 14.6,
+          "en": "Purple, purple, I see purple!",
+          "zh": "紫色紫色，我看到紫色！"
+        },
+        {
+          "start": 14.74,
+          "end": 21.5,
+          "en": "Grape, grape, purple grape!",
+          "zh": "紫紫的葡萄，葡萄！"
+        },
+        {
+          "start": 21.62,
+          "end": 28.2,
+          "en": "Eggplant, eggplant, shiny eggplant!",
+          "zh": "紫紫的茄子，茄子！"
+        },
+        {
+          "start": 28.34,
+          "end": 35.5,
+          "en": "Flower, flower, purple flower!",
+          "zh": "紫紫的花朵，花朵！"
+        },
+        {
+          "start": 35.7,
+          "end": 38.8,
+          "en": "Purple, purple, I see purple!",
+          "zh": "紫色紫色，我看到紫色！"
+        },
+        {
+          "start": 38.88,
+          "end": 42.4,
+          "en": "Purple, purple, I see purple!",
+          "zh": "紫色紫色，我看到紫色！"
+        },
+        {
+          "start": 42.6,
+          "end": 45.6,
+          "en": "Guess! What color? PURPLE!",
+          "zh": "猜一猜！什么颜色？紫色！"
+        },
+        {
+          "start": 45.6,
+          "end": 50.0,
+          "en": "Guess! What color? PURPLE!",
+          "zh": "猜一猜！什么颜色？紫色！"
+        }
+      ],
+      "words": [
+        {
+          "en": "grape",
+          "zh": "葡萄",
+          "ipa": "/greɪp/",
+          "start": 14.74,
+          "end": 21.62,
+          "image": "episodes/06-purple/thumbs/frame03.jpg"
+        },
+        {
+          "en": "eggplant",
+          "zh": "茄子",
+          "ipa": "/ˈeɡ.plænt/",
+          "start": 21.62,
+          "end": 28.34,
+          "image": "episodes/06-purple/thumbs/frame04.jpg"
+        },
+        {
+          "en": "flower",
+          "zh": "紫花",
+          "ipa": "/ˈflaʊ.ər/",
+          "start": 28.34,
+          "end": 35.7,
+          "image": "episodes/06-purple/thumbs/frame05.jpg"
+        }
+      ],
+      "spell": [
+        {
+          "w": "purple",
+          "zh": "紫色",
+          "image": "episodes/06-purple/thumbs/frame01.jpg",
+          "start": 7.84,
+          "end": 11.3,
+          "lyric": "Purple, purple, I see purple!"
+        },
+        {
+          "w": "grape",
+          "zh": "葡萄",
+          "image": "episodes/06-purple/thumbs/frame03.jpg",
+          "start": 14.74,
+          "end": 21.62,
+          "lyric": "Grape, grape, purple grape!"
+        },
+        {
+          "w": "flower",
+          "zh": "紫花",
+          "image": "episodes/06-purple/thumbs/frame05.jpg",
+          "start": 28.34,
+          "end": 35.7,
+          "lyric": "Flower, flower, purple flower!"
+        }
+      ],
+      "game": true
+    },
+    {
+      "id": "07-pink",
+      "series": "mimi-songs",
+      "unit": "集",
+      "no": 7,
+      "color": {
+        "en": "Pink",
+        "zh": "粉色",
+        "hex": "#FF3EA5"
+      },
+      "title": {
+        "en": "Pink, Hello!",
+        "zh": "粉色，你好！"
+      },
+      "landscape": true,
+      "duration": 55.0,
+      "video": "episodes/07-pink/pink_episode7_1080p_web.mp4",
+      "videoWide": "",
+      "audio": "episodes/07-pink/song/pink_v2.mp3",
+      "cover": "episodes/07-pink/thumbs/frame01.jpg",
+      "poster": "episodes/07-pink/storyboard/frame01.jpg",
+      "lyrics": [
+        {
+          "start": 1.5,
+          "end": 8.3,
+          "en": "Pink, pink, hello pink!",
+          "zh": "粉色粉色，你好粉色！"
+        },
+        {
+          "start": 8.4,
+          "end": 14.9,
+          "en": "Pink pig, pink pig, oink oink!",
+          "zh": "粉色小猪，哼哼哼！"
+        },
+        {
+          "start": 15.0,
+          "end": 21.8,
+          "en": "Pink bow, pink bow, tie a bow!",
+          "zh": "粉色蝴蝶结，系一系！"
+        },
+        {
+          "start": 21.9,
+          "end": 28.8,
+          "en": "Pink rose, pink rose, sniff sniff, so sweet!",
+          "zh": "粉色玫瑰，闻一闻，真香！"
+        },
+        {
+          "start": 28.9,
+          "end": 35.3,
+          "en": "Pink donut, pink donut, yum yum yum!",
+          "zh": "粉色甜甜圈，好好吃！"
+        },
+        {
+          "start": 35.4,
+          "end": 39.2,
+          "en": "Pink, pink, hello pink!",
+          "zh": "粉色粉色，你好粉色！"
+        },
+        {
+          "start": 39.3,
+          "end": 47.4,
+          "en": "Paint a pink pig, oink oink!",
+          "zh": "画只小猪，哼哼哼！"
+        },
+        {
+          "start": 47.6,
+          "end": 51.5,
+          "en": "What color is it?",
+          "zh": "这是什么颜色？"
+        },
+        {
+          "start": 51.6,
+          "end": 55.0,
+          "en": "PINK!",
+          "zh": "粉色！"
+        }
+      ],
+      "words": [
+        {
+          "en": "pink",
+          "zh": "粉色",
+          "ipa": "/pɪŋk/",
+          "start": 1.5,
+          "end": 8.3,
+          "image": "episodes/07-pink/thumbs/frame01.jpg"
+        },
+        {
+          "en": "pig",
+          "zh": "小猪",
+          "ipa": "/pɪɡ/",
+          "start": 8.4,
+          "end": 14.9,
+          "image": "episodes/07-pink/thumbs/frame02.jpg"
+        },
+        {
+          "en": "bow",
+          "zh": "蝴蝶结",
+          "ipa": "/boʊ/",
+          "start": 15.0,
+          "end": 21.8,
+          "image": "episodes/07-pink/thumbs/frame03.jpg"
+        },
+        {
+          "en": "rose",
+          "zh": "玫瑰",
+          "ipa": "/roʊz/",
+          "start": 21.9,
+          "end": 28.8,
+          "image": "episodes/07-pink/thumbs/frame04.jpg"
+        },
+        {
+          "en": "donut",
+          "zh": "甜甜圈",
+          "ipa": "/ˈdoʊnʌt/",
+          "start": 28.9,
+          "end": 35.3,
+          "image": "episodes/07-pink/thumbs/frame05.jpg"
+        },
+        {
+          "en": "paint",
+          "zh": "画画",
+          "ipa": "/peɪnt/",
+          "start": 39.3,
+          "end": 47.4,
+          "image": "episodes/07-pink/thumbs/frame06.jpg"
+        }
+      ],
+      "spell": [
+        {
+          "w": "pink",
+          "zh": "粉色",
+          "image": "episodes/07-pink/thumbs/frame01.jpg",
+          "start": 8.4,
+          "end": 14.9,
+          "lyric": "Pink pig, pink pig, oink oink!"
+        },
+        {
+          "w": "pig",
+          "zh": "小猪",
+          "image": "episodes/07-pink/thumbs/frame02.jpg",
+          "start": 8.4,
+          "end": 14.9,
+          "lyric": "Pink pig, pink pig, oink oink!"
+        },
+        {
+          "w": "bow",
+          "zh": "蝴蝶结",
+          "image": "episodes/07-pink/thumbs/frame03.jpg",
+          "start": 15.0,
+          "end": 21.8,
+          "lyric": "Pink bow, pink bow, tie a bow!"
+        },
+        {
+          "w": "rose",
+          "zh": "玫瑰",
+          "image": "episodes/07-pink/thumbs/frame04.jpg",
+          "start": 21.9,
+          "end": 28.8,
+          "lyric": "Pink rose, pink rose, sniff sniff, so sweet!"
+        },
+        {
+          "w": "donut",
+          "zh": "甜甜圈",
+          "image": "episodes/07-pink/thumbs/frame05.jpg",
+          "start": 28.9,
+          "end": 35.3,
+          "lyric": "Pink donut, pink donut, yum yum yum!"
+        },
+        {
+          "w": "paint",
+          "zh": "画画",
+          "image": "episodes/07-pink/thumbs/frame06.jpg",
+          "start": 39.3,
+          "end": 47.4,
+          "lyric": "Paint a pink pig, oink oink!"
+        }
+      ],
+      "game": true
+    },
+    {
+      "id": "08-brown",
+      "series": "mimi-songs",
+      "unit": "集",
+      "no": 8,
+      "color": {
+        "en": "Brown",
+        "zh": "棕色",
+        "hex": "#8F5A2A"
+      },
+      "title": {
+        "en": "Brown, Brown, I See Brown",
+        "zh": "棕色棕色我看到棕色"
+      },
+      "landscape": true,
+      "duration": 63.192,
+      "video": "episodes/08-brown/brown_episode8_1920x1080_web.mp4",
+      "videoWide": "",
+      "audio": "episodes/08-brown/song/brown_v2.mp3",
+      "cover": "episodes/08-brown/thumbs/frame01.jpg",
+      "poster": "episodes/08-brown/storyboard/frame01.jpg",
+      "lyrics": [
+        {
+          "start": 2.0,
+          "end": 5.9,
+          "en": "Brown! Brown!",
+          "zh": "棕色！"
+        },
+        {
+          "start": 6.0,
+          "end": 14.9,
+          "en": "Brown, brown, I see brown!",
+          "zh": "棕色棕色，我看到棕色！"
+        },
+        {
+          "start": 15.0,
+          "end": 23.8,
+          "en": "Bear, bear, brown bear!",
+          "zh": "棕色小熊，小熊！"
+        },
+        {
+          "start": 24.0,
+          "end": 32.5,
+          "en": "Bread, bread, brown bread!",
+          "zh": "棕色面包，面包！"
+        },
+        {
+          "start": 32.7,
+          "end": 41.5,
+          "en": "Acorn, acorn, little acorn!",
+          "zh": "棕色橡果，橡果！"
+        },
+        {
+          "start": 41.7,
+          "end": 49.9,
+          "en": "Brown, brown, I see brown!",
+          "zh": "棕色棕色，我看到棕色！"
+        },
+        {
+          "start": 50.1,
+          "end": 53.5,
+          "en": "Hug, hug! Soft bear! What color?",
+          "zh": ""
+        },
+        {
+          "start": 55.4,
+          "end": 58.4,
+          "en": "",
+          "zh": "抱一抱！什么颜色？"
+        }
+      ],
+      "words": [
+        {
+          "en": "brown",
+          "zh": "棕色",
+          "ipa": "/braʊn/",
+          "start": 2.0,
+          "end": 14.9,
+          "image": "episodes/08-brown/thumbs/frame02.jpg"
+        },
+        {
+          "en": "bear",
+          "zh": "小熊",
+          "ipa": "/ber/",
+          "start": 15.0,
+          "end": 23.8,
+          "image": "episodes/08-brown/thumbs/frame03.jpg"
+        },
+        {
+          "en": "bread",
+          "zh": "面包",
+          "ipa": "/bred/",
+          "start": 24.0,
+          "end": 32.5,
+          "image": "episodes/08-brown/thumbs/frame04.jpg"
+        },
+        {
+          "en": "acorn",
+          "zh": "橡果",
+          "ipa": "/ˈeɪkɔːrn/",
+          "start": 32.7,
+          "end": 41.5,
+          "image": "episodes/08-brown/thumbs/frame05.jpg"
+        },
+        {
+          "en": "brown",
+          "zh": "棕色",
+          "ipa": "/braʊn/",
+          "start": 41.7,
+          "end": 49.9,
+          "image": "episodes/08-brown/thumbs/frame02.jpg"
+        }
+      ],
+      "spell": [
+        {
+          "w": "brown",
+          "zh": "棕色",
+          "image": "episodes/08-brown/thumbs/frame01.jpg",
+          "start": 6.0,
+          "end": 14.9,
+          "lyric": "Brown, brown, I see brown!"
+        },
+        {
+          "w": "bear",
+          "zh": "小熊",
+          "image": "episodes/08-brown/thumbs/frame03.jpg",
+          "start": 15.0,
+          "end": 23.8,
+          "lyric": "Bear, bear, brown bear!"
+        },
+        {
+          "w": "bread",
+          "zh": "面包",
+          "image": "episodes/08-brown/thumbs/frame04.jpg",
+          "start": 24.0,
+          "end": 32.5,
+          "lyric": "Bread, bread, brown bread!"
+        },
+        {
+          "w": "acorn",
+          "zh": "橡果",
+          "image": "episodes/08-brown/thumbs/frame05.jpg",
+          "start": 32.7,
+          "end": 41.5,
+          "lyric": "Acorn, acorn, little acorn!"
+        }
+      ],
+      "game": true
+    },
+    {
+      "id": "09-black",
+      "series": "mimi-songs",
+      "unit": "集",
+      "no": 9,
+      "color": {
+        "en": "Black",
+        "zh": "黑色",
+        "hex": "#222222"
+      },
+      "title": {
+        "en": "Black, Black, I See Black",
+        "zh": "黑色黑色我看到黑色"
+      },
+      "landscape": true,
+      "duration": 55.224,
+      "video": "episodes/09-black/black_episode9_1920x1080_web.mp4",
+      "videoWide": "",
+      "audio": "episodes/09-black/song/black_v2.mp3",
+      "cover": "episodes/09-black/thumbs/frame01.jpg",
+      "poster": "episodes/09-black/storyboard/frame01.jpg",
+      "lyrics": [
+        {
+          "start": 2.0,
+          "end": 6.9,
+          "en": "Black! Black!",
+          "zh": "黑色！"
+        },
+        {
+          "start": 7.0,
+          "end": 13.1,
+          "en": "Black, black, I see black!",
+          "zh": "黑色黑色，我看到黑色！"
+        },
+        {
+          "start": 15.8,
+          "end": 23.1,
+          "en": "Puppy, puppy, black puppy!",
+          "zh": "黑色小狗，小狗！"
+        },
+        {
+          "start": 23.3,
+          "end": 29.8,
+          "en": "Piano, piano, tap tap tap!",
+          "zh": "黑色钢琴，敲一敲！"
+        },
+        {
+          "start": 30.0,
+          "end": 37.3,
+          "en": "Shoe, shoe, shiny shoe!",
+          "zh": "黑色小鞋，小鞋！"
+        },
+        {
+          "start": 37.5,
+          "end": 44.9,
+          "en": "Black, black, I see black!",
+          "zh": "黑色黑色，我看到黑色！"
+        },
+        {
+          "start": 45.1,
+          "end": 48.7,
+          "en": "Pat pat! Soft puppy! What color?",
+          "zh": ""
+        },
+        {
+          "start": 49.0,
+          "end": 51.8,
+          "en": "",
+          "zh": "摸摸看！什么颜色？"
+        }
+      ],
+      "words": [
+        {
+          "en": "black",
+          "zh": "黑色",
+          "ipa": "/blæk/",
+          "start": 2.0,
+          "end": 13.1,
+          "image": "episodes/09-black/thumbs/frame02.jpg"
+        },
+        {
+          "en": "puppy",
+          "zh": "小狗",
+          "ipa": "/ˈpʌpi/",
+          "start": 13.3,
+          "end": 23.1,
+          "image": "episodes/09-black/thumbs/frame03.jpg"
+        },
+        {
+          "en": "piano",
+          "zh": "钢琴",
+          "ipa": "/piˈænoʊ/",
+          "start": 23.3,
+          "end": 29.8,
+          "image": "episodes/09-black/thumbs/frame04.jpg"
+        },
+        {
+          "en": "shoe",
+          "zh": "小鞋",
+          "ipa": "/ʃuː/",
+          "start": 30.0,
+          "end": 37.3,
+          "image": "episodes/09-black/thumbs/frame05.jpg"
+        },
+        {
+          "en": "black",
+          "zh": "黑色",
+          "ipa": "/blæk/",
+          "start": 37.5,
+          "end": 44.9,
+          "image": "episodes/09-black/thumbs/frame02.jpg"
+        }
+      ],
+      "spell": [
+        {
+          "w": "black",
+          "zh": "黑色",
+          "image": "episodes/09-black/thumbs/frame01.jpg",
+          "start": 7.0,
+          "end": 13.1,
+          "lyric": "Black, black, I see black!"
+        },
+        {
+          "w": "puppy",
+          "zh": "小狗",
+          "image": "episodes/09-black/thumbs/frame03.jpg",
+          "start": 13.3,
+          "end": 23.1,
+          "lyric": "Puppy, puppy, black puppy!"
+        },
+        {
+          "w": "piano",
+          "zh": "钢琴",
+          "image": "episodes/09-black/thumbs/frame04.jpg",
+          "start": 23.3,
+          "end": 29.8,
+          "lyric": "Piano, piano, tap tap tap!"
+        },
+        {
+          "w": "shoe",
+          "zh": "小鞋",
+          "image": "episodes/09-black/thumbs/frame05.jpg",
+          "start": 30.0,
+          "end": 37.3,
+          "lyric": "Shoe, shoe, shiny shoe!"
+        }
+      ],
+      "game": true
+    },
+    {
+      "id": "10-white",
+      "series": "mimi-songs",
+      "unit": "集",
+      "no": 10,
+      "color": {
+        "en": "White",
+        "zh": "白色",
+        "hex": "#FFFFFF"
+      },
+      "title": {
+        "en": "White, White, I See White",
+        "zh": "白色白色我看到白色"
+      },
+      "landscape": true,
+      "duration": 75.912,
+      "video": "episodes/10-white/white_episode10_1920x1080_web.mp4",
+      "videoWide": "",
+      "audio": "episodes/10-white/song/white_v1.mp3",
+      "cover": "episodes/10-white/thumbs/frame01.jpg",
+      "poster": "episodes/10-white/storyboard/frame01.jpg",
+      "lyrics": [
+        {
+          "start": 2.2,
+          "end": 5.2,
+          "en": "White! White!",
+          "zh": "白色！"
+        },
+        {
+          "start": 10.1,
+          "end": 15.7,
+          "en": "White, white, I see white!",
+          "zh": "白色白色，我看到白色！"
+        },
+        {
+          "start": 18.0,
+          "end": 26.2,
+          "en": "Bunny, bunny, white bunny!",
+          "zh": "白色小兔，小兔！"
+        },
+        {
+          "start": 30.5,
+          "end": 36.4,
+          "en": "Snow, snow, soft snow!",
+          "zh": "白色雪花，雪花！"
+        },
+        {
+          "start": 40.8,
+          "end": 47.2,
+          "en": "Milk, milk, sip sip sip!",
+          "zh": "白色牛奶，喝一口！"
+        },
+        {
+          "start": 51.2,
+          "end": 57.2,
+          "en": "White, white, I see white!",
+          "zh": "白色白色，我看到白色！"
+        },
+        {
+          "start": 61.4,
+          "end": 63.9,
+          "en": "Catch the snow! What color?",
+          "zh": ""
+        },
+        {
+          "start": 64.5,
+          "end": 66.6,
+          "en": "",
+          "zh": "接住雪！什么颜色？"
+        }
+      ],
+      "words": [
+        {
+          "en": "white",
+          "zh": "白色",
+          "ipa": "/waɪt/",
+          "start": 2.2,
+          "end": 15.7,
+          "image": "episodes/10-white/thumbs/frame02.jpg"
+        },
+        {
+          "en": "bunny",
+          "zh": "小兔",
+          "ipa": "/ˈbʌni/",
+          "start": 17.6,
+          "end": 29.4,
+          "image": "episodes/10-white/thumbs/frame03.jpg"
+        },
+        {
+          "en": "snow",
+          "zh": "雪花",
+          "ipa": "/snoʊ/",
+          "start": 29.8,
+          "end": 40.0,
+          "image": "episodes/10-white/thumbs/frame04.jpg"
+        },
+        {
+          "en": "milk",
+          "zh": "牛奶",
+          "ipa": "/mɪlk/",
+          "start": 40.4,
+          "end": 50.4,
+          "image": "episodes/10-white/thumbs/frame05.jpg"
+        },
+        {
+          "en": "white",
+          "zh": "白色",
+          "ipa": "/waɪt/",
+          "start": 50.8,
+          "end": 60.6,
+          "image": "episodes/10-white/thumbs/frame02.jpg"
+        }
+      ],
+      "spell": [
+        {
+          "w": "white",
+          "zh": "白色",
+          "image": "episodes/10-white/thumbs/frame01.jpg",
+          "start": 10.1,
+          "end": 15.7,
+          "lyric": "White, white, I see white!"
+        },
+        {
+          "w": "bunny",
+          "zh": "小兔",
+          "image": "episodes/10-white/thumbs/frame03.jpg",
+          "start": 17.6,
+          "end": 29.4,
+          "lyric": "Bunny, bunny, white bunny!"
+        },
+        {
+          "w": "snow",
+          "zh": "雪花",
+          "image": "episodes/10-white/thumbs/frame04.jpg",
+          "start": 29.8,
+          "end": 40.0,
+          "lyric": "Snow, snow, soft snow!"
+        },
+        {
+          "w": "milk",
+          "zh": "牛奶",
+          "image": "episodes/10-white/thumbs/frame05.jpg",
+          "start": 40.4,
+          "end": 50.4,
+          "lyric": "Milk, milk, sip sip sip!"
+        }
+      ],
+      "game": true
+    },
+    {
+      "id": "11-gray",
+      "series": "mimi-songs",
+      "unit": "集",
+      "no": 11,
+      "color": {
+        "en": "Gray",
+        "zh": "灰色",
+        "hex": "#8A8A8A"
+      },
+      "title": {
+        "en": "Gray, Gray, I See Gray",
+        "zh": "灰色灰色我看到灰色"
+      },
+      "landscape": true,
+      "duration": 56.28,
+      "video": "episodes/11-gray/gray_episode11_1920x1080_web.mp4",
+      "videoWide": "",
+      "audio": "episodes/11-gray/song/gray_v2.mp3",
+      "cover": "episodes/11-gray/thumbs/frame01.jpg",
+      "poster": "episodes/11-gray/storyboard/frame01.jpg",
+      "lyrics": [
+        {
+          "start": 1.8,
+          "end": 9.4,
+          "en": "Gray, gray, I see gray!",
+          "zh": "灰色灰色，我看到灰色！"
+        },
+        {
+          "start": 12.4,
+          "end": 19.2,
+          "en": "Elephant, elephant, gray elephant!",
+          "zh": "灰色小象，小象！"
+        },
+        {
+          "start": 19.3,
+          "end": 26.2,
+          "en": "Cloud, cloud, rain cloud!",
+          "zh": "灰色云朵，云朵！"
+        },
+        {
+          "start": 26.3,
+          "end": 33.3,
+          "en": "Mouse, mouse, little mouse!",
+          "zh": "灰色小老鼠，小老鼠！"
+        },
+        {
+          "start": 33.4,
+          "end": 40.7,
+          "en": "Gray, gray, I see gray!",
+          "zh": "灰色灰色，我看到灰色！"
+        },
+        {
+          "start": 40.8,
+          "end": 45.5,
+          "en": "Share the umbrella! What color?",
+          "zh": ""
+        },
+        {
+          "start": 48.0,
+          "end": 51.8,
+          "en": "",
+          "zh": "一起打伞！什么颜色？"
+        }
+      ],
+      "words": [
+        {
+          "en": "gray",
+          "zh": "灰色",
+          "ipa": "/ɡreɪ/",
+          "start": 1.8,
+          "end": 9.4,
+          "image": "episodes/11-gray/thumbs/frame02.jpg"
+        },
+        {
+          "en": "elephant",
+          "zh": "小象",
+          "ipa": "/ˈelɪfənt/",
+          "start": 12.4,
+          "end": 19.2,
+          "image": "episodes/11-gray/thumbs/frame03.jpg"
+        },
+        {
+          "en": "cloud",
+          "zh": "云朵",
+          "ipa": "/klaʊd/",
+          "start": 19.3,
+          "end": 26.2,
+          "image": "episodes/11-gray/thumbs/frame04.jpg"
+        },
+        {
+          "en": "mouse",
+          "zh": "小老鼠",
+          "ipa": "/maʊs/",
+          "start": 26.3,
+          "end": 33.3,
+          "image": "episodes/11-gray/thumbs/frame05.jpg"
+        },
+        {
+          "en": "gray",
+          "zh": "灰色",
+          "ipa": "/ɡreɪ/",
+          "start": 33.4,
+          "end": 40.7,
+          "image": "episodes/11-gray/thumbs/frame02.jpg"
+        }
+      ],
+      "spell": [
+        {
+          "w": "gray",
+          "zh": "灰色",
+          "image": "episodes/11-gray/thumbs/frame01.jpg",
+          "start": 12.4,
+          "end": 19.2,
+          "lyric": "Elephant, elephant, gray elephant!"
+        },
+        {
+          "w": "cloud",
+          "zh": "云朵",
+          "image": "episodes/11-gray/thumbs/frame04.jpg",
+          "start": 19.3,
+          "end": 26.2,
+          "lyric": "Cloud, cloud, rain cloud!"
+        },
+        {
+          "w": "mouse",
+          "zh": "小老鼠",
+          "image": "episodes/11-gray/thumbs/frame05.jpg",
+          "start": 26.3,
+          "end": 33.3,
+          "lyric": "Mouse, mouse, little mouse!"
+        }
+      ],
+      "game": true
+    },
+    {
+      "id": "12-review",
+      "series": "mimi-songs",
+      "unit": "集",
+      "no": 12,
+      "color": {
+        "en": "Colors",
+        "zh": "颜色复习",
+        "hex": "#E8352E"
+      },
+      "title": {
+        "en": "Colors, Colors, Let's Review",
+        "zh": "颜色颜色来复习"
+      },
+      "landscape": true,
+      "duration": 43.944,
+      "video": "episodes/12-review/review_episode12_1920x1080_web.mp4",
+      "videoWide": "",
+      "audio": "episodes/12-review/song/review_v1.mp3",
+      "cover": "episodes/12-review/thumbs/frame01.jpg",
+      "poster": "episodes/12-review/storyboard/frame01.jpg",
+      "lyrics": [
+        {
+          "start": 0.05,
+          "end": 3.5,
+          "en": "Red apple!",
+          "zh": "红色，红色苹果！"
+        },
+        {
+          "start": 3.6,
+          "end": 7.1000000000000005,
+          "en": "Yellow banana!",
+          "zh": "黄色，黄色香蕉！"
+        },
+        {
+          "start": 7.2,
+          "end": 10.6,
+          "en": "Blue blueberry!",
+          "zh": "蓝色，蓝色蓝莓！"
+        },
+        {
+          "start": 10.7,
+          "end": 14.0,
+          "en": "Green frog!",
+          "zh": "绿色，绿色青蛙！"
+        },
+        {
+          "start": 14.1,
+          "end": 17.5,
+          "en": "Orange pumpkin!",
+          "zh": "橙色，橙色南瓜！"
+        },
+        {
+          "start": 17.6,
+          "end": 20.799999999999997,
+          "en": "Purple grape!",
+          "zh": "紫色葡萄！"
+        },
+        {
+          "start": 20.9,
+          "end": 23.9,
+          "en": "Pink pig!",
+          "zh": "粉色小猪！"
+        },
+        {
+          "start": 24.0,
+          "end": 27.0,
+          "en": "Brown bear!",
+          "zh": "棕色，棕色小熊！"
+        },
+        {
+          "start": 27.1,
+          "end": 30.2,
+          "en": "Black puppy!",
+          "zh": "黑色，黑色小狗！"
+        },
+        {
+          "start": 30.3,
+          "end": 33.699999999999996,
+          "en": "White bunny!",
+          "zh": "白色，白色小兔！"
+        },
+        {
+          "start": 33.8,
+          "end": 38.1,
+          "en": "Gray elephant!",
+          "zh": "灰色，灰色小象！"
+        },
+        {
+          "start": 38.2,
+          "end": 43.6,
+          "en": "What's your favorite color?",
+          "zh": "你最喜欢什么颜色？"
+        }
+      ],
+      "words": [
+        {
+          "en": "red · apple",
+          "zh": "红色 · 苹果",
+          "ipa": "/red/ · /ˈæpəl/",
+          "start": 0.05,
+          "end": 3.5,
+          "image": "episodes/12-review/thumbs/frame02.jpg"
+        },
+        {
+          "en": "yellow · banana",
+          "zh": "黄色 · 香蕉",
+          "ipa": "/ˈjeloʊ/ · /bəˈnænə/",
+          "start": 3.6,
+          "end": 7.1000000000000005,
+          "image": "episodes/12-review/thumbs/frame02.jpg"
+        },
+        {
+          "en": "blue · blueberry",
+          "zh": "蓝色 · 蓝莓",
+          "ipa": "/bluː/ · /ˈbluːberi/",
+          "start": 7.2,
+          "end": 10.6,
+          "image": "episodes/12-review/thumbs/frame03.jpg"
+        },
+        {
+          "en": "green · frog",
+          "zh": "绿色 · 青蛙",
+          "ipa": "/ɡriːn/ · /frɔːɡ/",
+          "start": 10.7,
+          "end": 14.0,
+          "image": "episodes/12-review/thumbs/frame03.jpg"
+        },
+        {
+          "en": "orange · pumpkin",
+          "zh": "橙色 · 南瓜",
+          "ipa": "/ˈɔːrɪndʒ/ · /ˈpʌmpkɪn/",
+          "start": 14.1,
+          "end": 17.5,
+          "image": "episodes/12-review/thumbs/frame04.jpg"
+        },
+        {
+          "en": "purple · grape",
+          "zh": "紫色 · 葡萄",
+          "ipa": "/ˈpɜːrpəl/ · /ɡreɪp/",
+          "start": 17.6,
+          "end": 20.799999999999997,
+          "image": "episodes/12-review/thumbs/frame04.jpg"
+        },
+        {
+          "en": "pink · pig",
+          "zh": "粉色 · 小猪",
+          "ipa": "/pɪŋk/ · /pɪɡ/",
+          "start": 20.9,
+          "end": 23.9,
+          "image": "episodes/12-review/thumbs/frame05.jpg"
+        },
+        {
+          "en": "brown · bear",
+          "zh": "棕色 · 小熊",
+          "ipa": "/braʊn/ · /ber/",
+          "start": 24.0,
+          "end": 27.0,
+          "image": "episodes/12-review/thumbs/frame05.jpg"
+        },
+        {
+          "en": "black · puppy",
+          "zh": "黑色 · 小狗",
+          "ipa": "/blæk/ · /ˈpʌpi/",
+          "start": 27.1,
+          "end": 30.2,
+          "image": "episodes/12-review/thumbs/frame06.jpg"
+        },
+        {
+          "en": "white · bunny",
+          "zh": "白色 · 小兔",
+          "ipa": "/waɪt/ · /ˈbʌni/",
+          "start": 30.3,
+          "end": 33.699999999999996,
+          "image": "episodes/12-review/thumbs/frame06.jpg"
+        },
+        {
+          "en": "gray · elephant",
+          "zh": "灰色 · 小象",
+          "ipa": "/ɡreɪ/ · /ˈelɪfənt/",
+          "start": 33.8,
+          "end": 38.1,
+          "image": "episodes/12-review/thumbs/frame07.jpg"
+        }
+      ],
+      "spell": [
+        {
+          "w": "colors",
+          "zh": "颜色复习",
+          "image": "episodes/12-review/thumbs/frame01.jpg",
+          "start": 0.05,
+          "end": 3.5,
+          "lyric": "Red apple!"
+        }
+      ],
+      "game": false
+    },
+    {
+      "id": "13-mixing",
+      "series": "mimi-songs",
+      "unit": "集",
+      "no": 13,
+      "color": {
+        "en": "Mixing",
+        "zh": "混色",
+        "hex": "#F08A2A"
+      },
+      "title": {
+        "en": "Mix, Mix, Mix the Paints",
+        "zh": "搅一搅颜料搅一搅"
+      },
+      "landscape": true,
+      "duration": 52.224,
+      "video": "episodes/13-mixing/mixing_episode13_1920x1080_web.mp4",
+      "videoWide": "",
+      "audio": "episodes/13-mixing/song/mixing_v2.mp3",
+      "cover": "episodes/13-mixing/thumbs/frame01.jpg",
+      "poster": "episodes/13-mixing/storyboard/frame01.jpg",
+      "lyrics": [
+        {
+          "start": 4.6,
+          "end": 12.4,
+          "en": "Mix, mix, mix the paints!",
+          "zh": "搅一搅，颜料搅一搅！"
+        },
+        {
+          "start": 12.5,
+          "end": 22.1,
+          "en": "Red and yellow, mix mix mix! Orange!",
+          "zh": "红色黄色，搅一搅！橙色！"
+        },
+        {
+          "start": 22.2,
+          "end": 33.6,
+          "en": "Blue and yellow, mix mix mix! Green!",
+          "zh": "蓝色黄色，搅一搅！绿色！"
+        },
+        {
+          "start": 33.7,
+          "end": 44.4,
+          "en": "Red and blue, mix mix mix! Purple!",
+          "zh": "红色蓝色，搅一搅！紫色！"
+        },
+        {
+          "start": 44.6,
+          "end": 48.2,
+          "en": "Guess the color! What will it be?",
+          "zh": ""
+        },
+        {
+          "start": 48.4,
+          "end": 52.0,
+          "en": "",
+          "zh": "猜一猜！会是什么颜色？"
+        }
+      ],
+      "words": [
+        {
+          "en": "mix",
+          "zh": "搅一搅",
+          "ipa": "/mɪks/",
+          "start": 4.6,
+          "end": 12.4,
+          "image": "episodes/13-mixing/thumbs/frame02.jpg"
+        },
+        {
+          "en": "red + yellow = orange",
+          "zh": "红色 + 黄色 = 橙色",
+          "ipa": "",
+          "start": 12.5,
+          "end": 22.1,
+          "image": "episodes/13-mixing/thumbs/frame03.jpg"
+        },
+        {
+          "en": "blue + yellow = green",
+          "zh": "蓝色 + 黄色 = 绿色",
+          "ipa": "",
+          "start": 22.2,
+          "end": 33.6,
+          "image": "episodes/13-mixing/thumbs/frame04.jpg"
+        },
+        {
+          "en": "red + blue = purple",
+          "zh": "红色 + 蓝色 = 紫色",
+          "ipa": "",
+          "start": 33.7,
+          "end": 44.4,
+          "image": "episodes/13-mixing/thumbs/frame05.jpg"
+        }
+      ],
+      "spell": [
+        {
+          "w": "mixing",
+          "zh": "混色",
+          "image": "episodes/13-mixing/thumbs/frame01.jpg",
+          "start": 4.6,
+          "end": 12.4,
+          "lyric": "Mix, mix, mix the paints!"
+        },
+        {
+          "w": "mix",
+          "zh": "搅一搅",
+          "image": "episodes/13-mixing/thumbs/frame02.jpg",
+          "start": 4.6,
+          "end": 12.4,
+          "lyric": "Mix, mix, mix the paints!"
+        }
+      ],
+      "game": false
+    },
+    {
+      "id": "wanzhuan-secai-01",
+      "series": "wanzhuan-secai",
+      "unit": "课",
+      "no": 1,
+      "color": {
+        "en": "Red",
+        "zh": "",
+        "hex": "#E8352E"
+      },
+      "title": {
+        "en": "",
+        "zh": "红色遇见黄色"
+      },
+      "landscape": false,
+      "duration": 106.3,
+      "video": "series/wanzhuan-secai/01/lesson-01.mp4",
+      "videoWide": "",
+      "audio": "",
+      "cover": "series/wanzhuan-secai/01/cover.jpg",
+      "poster": "series/wanzhuan-secai/01/cover.jpg",
+      "release": "https://github.com/pomosherry-hue/kids-color/releases/download/v0.1.0/lesson-01.mp4",
+      "lyrics": [],
+      "words": [],
+      "spell": [],
+      "game": false
+    },
+    {
+      "id": "wanzhuan-secai-02",
+      "series": "wanzhuan-secai",
+      "unit": "课",
+      "no": 2,
+      "color": {
+        "en": "Yellow",
+        "zh": "",
+        "hex": "#E0A800"
+      },
+      "title": {
+        "en": "",
+        "zh": "黄色遇见蓝色"
+      },
+      "landscape": false,
+      "duration": 256.0,
+      "video": "series/wanzhuan-secai/02/lesson-02.mp4",
+      "videoWide": "",
+      "audio": "",
+      "cover": "series/wanzhuan-secai/02/cover.jpg",
+      "poster": "series/wanzhuan-secai/02/cover.jpg",
+      "release": "https://github.com/pomosherry-hue/kids-color/releases/download/v0.2.0/lesson-02.mp4",
+      "lyrics": [],
+      "words": [],
+      "spell": [],
+      "game": false
+    },
+    {
+      "id": "wanzhuan-secai-03",
+      "series": "wanzhuan-secai",
+      "unit": "课",
+      "no": 3,
+      "color": {
+        "en": "Red",
+        "zh": "",
+        "hex": "#E8352E"
+      },
+      "title": {
+        "en": "",
+        "zh": "红色遇见蓝色"
+      },
+      "landscape": false,
+      "duration": 306.1,
+      "video": "series/wanzhuan-secai/03/lesson-03.mp4",
+      "videoWide": "",
+      "audio": "",
+      "cover": "series/wanzhuan-secai/03/cover.jpg",
+      "poster": "series/wanzhuan-secai/03/cover.jpg",
+      "release": "https://raw.githubusercontent.com/pomosherry-hue/kids-color/33d97caf003665a91be681d1c6b1c8984fdfbfca/lesson-03.mp4",
+      "lyrics": [],
+      "words": [],
+      "spell": [],
+      "game": false
+    },
+    {
+      "id": "wanzhuan-secai-04",
+      "series": "wanzhuan-secai",
+      "unit": "课",
+      "no": 4,
+      "color": {
+        "en": "Orange",
+        "zh": "",
+        "hex": "#F07B1F"
+      },
+      "title": {
+        "en": "",
+        "zh": "谁能调出更多橙色"
+      },
+      "landscape": false,
+      "duration": 212.1,
+      "video": "series/wanzhuan-secai/04/lesson-04.mp4",
+      "videoWide": "",
+      "audio": "",
+      "cover": "series/wanzhuan-secai/04/cover.jpg",
+      "poster": "series/wanzhuan-secai/04/cover.jpg",
+      "release": "https://raw.githubusercontent.com/pomosherry-hue/kids-color/33d97caf003665a91be681d1c6b1c8984fdfbfca/lesson-04.mp4",
+      "lyrics": [],
+      "words": [],
+      "spell": [],
+      "game": false
+    },
+    {
+      "id": "wanzhuan-secai-05",
+      "series": "wanzhuan-secai",
+      "unit": "课",
+      "no": 5,
+      "color": {
+        "en": "Green",
+        "zh": "",
+        "hex": "#3BAA5C"
+      },
+      "title": {
+        "en": "",
+        "zh": "绿色是怎么来的"
+      },
+      "landscape": false,
+      "duration": 302.8,
+      "video": "series/wanzhuan-secai/05/lesson-05.mp4",
+      "videoWide": "",
+      "audio": "",
+      "cover": "series/wanzhuan-secai/05/cover.jpg",
+      "poster": "series/wanzhuan-secai/05/cover.jpg",
+      "release": "https://github.com/pomosherry-hue/kids-color/releases/download/v0.5.0/lesson-05.mp4",
+      "lyrics": [],
+      "words": [],
+      "spell": [],
+      "game": false
+    },
+    {
+      "id": "wanzhuan-secai-06",
+      "series": "wanzhuan-secai",
+      "unit": "课",
+      "no": 6,
+      "color": {
+        "en": "Blue",
+        "zh": "",
+        "hex": "#2F7DE1"
+      },
+      "title": {
+        "en": "",
+        "zh": "蓝色的世界"
+      },
+      "landscape": false,
+      "duration": 182.2,
+      "video": "series/wanzhuan-secai/06/lesson-06.mp4",
+      "videoWide": "",
+      "audio": "",
+      "cover": "series/wanzhuan-secai/06/cover.jpg",
+      "poster": "series/wanzhuan-secai/06/cover.jpg",
+      "release": "https://github.com/pomosherry-hue/kids-color/releases/download/v0.6.0/lesson-06.mp4",
+      "lyrics": [],
+      "words": [],
+      "spell": [],
+      "game": false
+    },
+    {
+      "id": "wanzhuan-secai-07",
+      "series": "wanzhuan-secai",
+      "unit": "课",
+      "no": 7,
+      "color": {
+        "en": "Brown",
+        "zh": "",
+        "hex": "#8B5A2B"
+      },
+      "title": {
+        "en": "",
+        "zh": "棕色不是一种新颜色"
+      },
+      "landscape": false,
+      "duration": 313.8,
+      "video": "series/wanzhuan-secai/07/lesson-07.mp4",
+      "videoWide": "",
+      "audio": "",
+      "cover": "series/wanzhuan-secai/07/cover.jpg",
+      "poster": "series/wanzhuan-secai/07/cover.jpg",
+      "release": "https://raw.githubusercontent.com/pomosherry-hue/kids-color/33d97caf003665a91be681d1c6b1c8984fdfbfca/lesson-07.mp4",
+      "lyrics": [],
+      "words": [],
+      "spell": [],
+      "game": false
+    },
+    {
+      "id": "wanzhuan-secai-08",
+      "series": "wanzhuan-secai",
+      "unit": "课",
+      "no": 8,
+      "color": {
+        "en": "Black",
+        "zh": "",
+        "hex": "#3B2A1A"
+      },
+      "title": {
+        "en": "",
+        "zh": "黑色加进去会怎样"
+      },
+      "landscape": false,
+      "duration": 233.0,
+      "video": "series/wanzhuan-secai/08/lesson-08.mp4",
+      "videoWide": "",
+      "audio": "",
+      "cover": "series/wanzhuan-secai/08/cover.jpg",
+      "poster": "series/wanzhuan-secai/08/cover.jpg",
+      "release": "https://raw.githubusercontent.com/pomosherry-hue/kids-color/33d97caf003665a91be681d1c6b1c8984fdfbfca/lesson-08.mp4",
+      "lyrics": [],
+      "words": [],
+      "spell": [],
+      "game": false
+    },
+    {
+      "id": "wanzhuan-secai-09",
+      "series": "wanzhuan-secai",
+      "unit": "课",
+      "no": 9,
+      "color": {
+        "en": "White",
+        "zh": "",
+        "hex": "#B9B2A6"
+      },
+      "title": {
+        "en": "",
+        "zh": "白色加进去会怎样"
+      },
+      "landscape": false,
+      "duration": 333.3,
+      "video": "series/wanzhuan-secai/09/lesson-09.mp4",
+      "videoWide": "",
+      "audio": "",
+      "cover": "series/wanzhuan-secai/09/cover.jpg",
+      "poster": "series/wanzhuan-secai/09/cover.jpg",
+      "release": "https://github.com/pomosherry-hue/kids-color/releases/download/v0.9.0/lesson-09.mp4",
+      "lyrics": [],
+      "words": [],
+      "spell": [],
+      "game": false
+    },
+    {
+      "id": "wanzhuan-secai-10",
+      "series": "wanzhuan-secai",
+      "unit": "课",
+      "no": 10,
+      "color": {
+        "en": "Red",
+        "zh": "",
+        "hex": "#E8352E"
+      },
+      "title": {
+        "en": "",
+        "zh": "同样的红，为什么不一样"
+      },
+      "landscape": false,
+      "duration": 262.6,
+      "video": "series/wanzhuan-secai/10/lesson-10.mp4",
+      "videoWide": "",
+      "audio": "",
+      "cover": "series/wanzhuan-secai/10/cover.jpg",
+      "poster": "series/wanzhuan-secai/10/cover.jpg",
+      "release": "https://github.com/pomosherry-hue/kids-color/releases/download/v0.10.0/lesson-10.mp4",
+      "lyrics": [],
+      "words": [],
+      "spell": [],
+      "game": false
+    },
+    {
+      "id": "wanzhuan-secai-11",
+      "series": "wanzhuan-secai",
+      "unit": "课",
+      "no": 11,
+      "color": {
+        "en": "Colors",
+        "zh": "",
+        "hex": "#F07B1F"
+      },
+      "title": {
+        "en": "",
+        "zh": "调出属于自己的颜色"
+      },
+      "landscape": false,
+      "duration": 267.9,
+      "video": "series/wanzhuan-secai/11/lesson-11.mp4",
+      "videoWide": "",
+      "audio": "",
+      "cover": "series/wanzhuan-secai/11/cover.jpg",
+      "poster": "series/wanzhuan-secai/11/cover.jpg",
+      "release": "https://github.com/pomosherry-hue/kids-color/releases/download/v0.11.0/lesson-11.mp4",
+      "lyrics": [],
+      "words": [],
+      "spell": [],
+      "game": false
+    },
+    {
+      "id": "wanzhuan-secai-12",
+      "series": "wanzhuan-secai",
+      "unit": "课",
+      "no": 12,
+      "color": {
+        "en": "Colors",
+        "zh": "",
+        "hex": "#F07B1F"
+      },
+      "title": {
+        "en": "",
+        "zh": "把颜色从亮排到暗"
+      },
+      "landscape": false,
+      "duration": 306.6,
+      "video": "series/wanzhuan-secai/12/lesson-12.mp4",
+      "videoWide": "",
+      "audio": "",
+      "cover": "series/wanzhuan-secai/12/cover.jpg",
+      "poster": "series/wanzhuan-secai/12/cover.jpg",
+      "release": "https://github.com/pomosherry-hue/kids-color/releases/download/v0.12.0/lesson-12.mp4",
+      "lyrics": [],
+      "words": [],
+      "spell": [],
+      "game": false
+    },
+    {
+      "id": "wanzhuan-secai-13",
+      "series": "wanzhuan-secai",
+      "unit": "课",
+      "no": 13,
+      "color": {
+        "en": "White",
+        "zh": "",
+        "hex": "#B9B2A6"
+      },
+      "title": {
+        "en": "",
+        "zh": "阳光下的白墙"
+      },
+      "landscape": false,
+      "duration": 410.3,
+      "video": "series/wanzhuan-secai/13/lesson-13.mp4",
+      "videoWide": "",
+      "audio": "",
+      "cover": "series/wanzhuan-secai/13/cover.jpg",
+      "poster": "series/wanzhuan-secai/13/cover.jpg",
+      "release": "https://github.com/pomosherry-hue/kids-color/releases/download/v0.13.0/lesson-13.mp4",
+      "lyrics": [],
+      "words": [],
+      "spell": [],
+      "game": false
+    },
+    {
+      "id": "wanzhuan-secai-14",
+      "series": "wanzhuan-secai",
+      "unit": "课",
+      "no": 14,
+      "color": {
+        "en": "Gray",
+        "zh": "",
+        "hex": "#8E8A84"
+      },
+      "title": {
+        "en": "",
+        "zh": "影子是什么颜色"
+      },
+      "landscape": false,
+      "duration": 276.1,
+      "video": "series/wanzhuan-secai/14/lesson-14.mp4",
+      "videoWide": "",
+      "audio": "",
+      "cover": "series/wanzhuan-secai/14/cover.jpg",
+      "poster": "series/wanzhuan-secai/14/cover.jpg",
+      "release": "https://github.com/pomosherry-hue/kids-color/releases/download/v0.14.0/lesson-14.mp4",
+      "lyrics": [],
+      "words": [],
+      "spell": [],
+      "game": false
+    },
+    {
+      "id": "wanzhuan-secai-15",
+      "series": "wanzhuan-secai",
+      "unit": "课",
+      "no": 15,
+      "color": {
+        "en": "Gray",
+        "zh": "",
+        "hex": "#8E8A84"
+      },
+      "title": {
+        "en": "",
+        "zh": "影子的边缘"
+      },
+      "landscape": false,
+      "duration": 263.4,
+      "video": "series/wanzhuan-secai/15/lesson-15.mp4",
+      "videoWide": "",
+      "audio": "",
+      "cover": "series/wanzhuan-secai/15/cover.jpg",
+      "poster": "series/wanzhuan-secai/15/cover.jpg",
+      "release": "https://github.com/pomosherry-hue/kids-color/releases/download/v0.15.0/lesson-15.mp4",
+      "lyrics": [],
+      "words": [],
+      "spell": [],
+      "game": false
+    },
+    {
+      "id": "wanzhuan-secai-16",
+      "series": "wanzhuan-secai",
+      "unit": "课",
+      "no": 16,
+      "color": {
+        "en": "Gray",
+        "zh": "",
+        "hex": "#8E8A84"
+      },
+      "title": {
+        "en": "",
+        "zh": "鲜艳和发灰"
+      },
+      "landscape": false,
+      "duration": 322.5,
+      "video": "series/wanzhuan-secai/16/lesson-16.mp4",
+      "videoWide": "",
+      "audio": "",
+      "cover": "series/wanzhuan-secai/16/cover.jpg",
+      "poster": "series/wanzhuan-secai/16/cover.jpg",
+      "release": "https://github.com/pomosherry-hue/kids-color/releases/download/v0.16.0/lesson-16.mp4",
+      "lyrics": [],
+      "words": [],
+      "spell": [],
+      "game": false
+    },
+    {
+      "id": "wanzhuan-secai-17",
+      "series": "wanzhuan-secai",
+      "unit": "课",
+      "no": 17,
+      "color": {
+        "en": "Blue",
+        "zh": "",
+        "hex": "#2F7DE1"
+      },
+      "title": {
+        "en": "",
+        "zh": "暖色和冷色"
+      },
+      "landscape": false,
+      "duration": 271.2,
+      "video": "series/wanzhuan-secai/17/lesson-17.mp4",
+      "videoWide": "",
+      "audio": "",
+      "cover": "series/wanzhuan-secai/17/cover.jpg",
+      "poster": "series/wanzhuan-secai/17/cover.jpg",
+      "release": "https://github.com/pomosherry-hue/kids-color/releases/download/v0.17.0/lesson-17.mp4",
+      "lyrics": [],
+      "words": [],
+      "spell": [],
+      "game": false
+    },
+    {
+      "id": "wanzhuan-secai-18",
+      "series": "wanzhuan-secai",
+      "unit": "课",
+      "no": 18,
+      "color": {
+        "en": "Blue",
+        "zh": "",
+        "hex": "#2F7DE1"
+      },
+      "title": {
+        "en": "",
+        "zh": "远山为什么发蓝"
+      },
+      "landscape": false,
+      "duration": 331.5,
+      "video": "series/wanzhuan-secai/18/lesson-18.mp4",
+      "videoWide": "",
+      "audio": "",
+      "cover": "series/wanzhuan-secai/18/cover.jpg",
+      "poster": "series/wanzhuan-secai/18/cover.jpg",
+      "release": "https://github.com/pomosherry-hue/kids-color/releases/download/v0.18.0/lesson-18.mp4",
+      "lyrics": [],
+      "words": [],
+      "spell": [],
+      "game": false
+    },
+    {
+      "id": "wanzhuan-secai-19",
+      "series": "wanzhuan-secai",
+      "unit": "课",
+      "no": 19,
+      "color": {
+        "en": "Colors",
+        "zh": "",
+        "hex": "#F07B1F"
+      },
+      "title": {
+        "en": "",
+        "zh": "旧衣服的颜色"
+      },
+      "landscape": false,
+      "duration": 308.6,
+      "video": "series/wanzhuan-secai/19/lesson-19.mp4",
+      "videoWide": "",
+      "audio": "",
+      "cover": "series/wanzhuan-secai/19/cover.jpg",
+      "poster": "series/wanzhuan-secai/19/cover.jpg",
+      "release": "https://github.com/pomosherry-hue/kids-color/releases/download/v0.19.0/lesson-19.mp4",
+      "lyrics": [],
+      "words": [],
+      "spell": [],
+      "game": false
+    },
+    {
+      "id": "wanzhuan-secai-20",
+      "series": "wanzhuan-secai",
+      "unit": "课",
+      "no": 20,
+      "color": {
+        "en": "Colors",
+        "zh": "",
+        "hex": "#F07B1F"
+      },
+      "title": {
+        "en": "",
+        "zh": "找出最鲜的那一块"
+      },
+      "landscape": false,
+      "duration": 251.5,
+      "video": "series/wanzhuan-secai/20/lesson-20.mp4",
+      "videoWide": "",
+      "audio": "",
+      "cover": "series/wanzhuan-secai/20/cover.jpg",
+      "poster": "series/wanzhuan-secai/20/cover.jpg",
+      "release": "https://github.com/pomosherry-hue/kids-color/releases/download/v0.20.0/lesson-20.mp4",
+      "lyrics": [],
+      "words": [],
+      "spell": [],
+      "game": false
+    },
+    {
+      "id": "wanzhuan-secai-21",
+      "series": "wanzhuan-secai",
+      "unit": "课",
+      "no": 21,
+      "color": {
+        "en": "Green",
+        "zh": "",
+        "hex": "#3BAA5C"
+      },
+      "title": {
+        "en": "",
+        "zh": "两种不同的绿色"
+      },
+      "landscape": false,
+      "duration": 329.8,
+      "video": "series/wanzhuan-secai/21/lesson-21.mp4",
+      "videoWide": "",
+      "audio": "",
+      "cover": "series/wanzhuan-secai/21/cover.jpg",
+      "poster": "series/wanzhuan-secai/21/cover.jpg",
+      "release": "https://raw.githubusercontent.com/pomosherry-hue/kids-color/33d97caf003665a91be681d1c6b1c8984fdfbfca/lesson-21.mp4",
+      "lyrics": [],
+      "words": [],
+      "spell": [],
+      "game": false
+    },
+    {
+      "id": "wanzhuan-secai-22",
+      "series": "wanzhuan-secai",
+      "unit": "课",
+      "no": 22,
+      "color": {
+        "en": "Yellow",
+        "zh": "",
+        "hex": "#E0A800"
+      },
+      "title": {
+        "en": "",
+        "zh": "阳光色和阴影色"
+      },
+      "landscape": false,
+      "duration": 306.0,
+      "video": "series/wanzhuan-secai/22/lesson-22.mp4",
+      "videoWide": "",
+      "audio": "",
+      "cover": "series/wanzhuan-secai/22/cover.jpg",
+      "poster": "series/wanzhuan-secai/22/cover.jpg",
+      "release": "https://raw.githubusercontent.com/pomosherry-hue/kids-color/33d97caf003665a91be681d1c6b1c8984fdfbfca/lesson-22.mp4",
+      "lyrics": [],
+      "words": [],
+      "spell": [],
+      "game": false
+    },
+    {
+      "id": "wanzhuan-secai-23",
+      "series": "wanzhuan-secai",
+      "unit": "课",
+      "no": 23,
+      "color": {
+        "en": "Green",
+        "zh": "",
+        "hex": "#3BAA5C"
+      },
+      "title": {
+        "en": "",
+        "zh": "同样的绿，冷还是暖"
+      },
+      "landscape": false,
+      "duration": 312.2,
+      "video": "series/wanzhuan-secai/23/lesson-23.mp4",
+      "videoWide": "",
+      "audio": "",
+      "cover": "series/wanzhuan-secai/23/cover.jpg",
+      "poster": "series/wanzhuan-secai/23/cover.jpg",
+      "release": "https://github.com/pomosherry-hue/kids-color/releases/download/v0.23.0/lesson-23.mp4",
+      "lyrics": [],
+      "words": [],
+      "spell": [],
+      "game": false
+    },
+    {
+      "id": "wanzhuan-secai-24",
+      "series": "wanzhuan-secai",
+      "unit": "课",
+      "no": 24,
+      "color": {
+        "en": "Orange",
+        "zh": "",
+        "hex": "#F07B1F"
+      },
+      "title": {
+        "en": "",
+        "zh": "给房间找一个暖色"
+      },
+      "landscape": false,
+      "duration": 303.6,
+      "video": "series/wanzhuan-secai/24/lesson-24.mp4",
+      "videoWide": "",
+      "audio": "",
+      "cover": "series/wanzhuan-secai/24/cover.jpg",
+      "poster": "series/wanzhuan-secai/24/cover.jpg",
+      "release": "https://github.com/pomosherry-hue/kids-color/releases/download/v0.24.0/lesson-24.mp4",
+      "lyrics": [],
+      "words": [],
+      "spell": [],
+      "game": false
+    },
+    {
+      "id": "wanzhuan-secai-25",
+      "series": "wanzhuan-secai",
+      "unit": "课",
+      "no": 25,
+      "color": {
+        "en": "Blue",
+        "zh": "",
+        "hex": "#2F7DE1"
+      },
+      "title": {
+        "en": "",
+        "zh": "给天空找一个冷色"
+      },
+      "landscape": false,
+      "duration": 303.2,
+      "video": "series/wanzhuan-secai/25/lesson-25.mp4",
+      "videoWide": "",
+      "audio": "",
+      "cover": "series/wanzhuan-secai/25/cover.jpg",
+      "poster": "series/wanzhuan-secai/25/cover.jpg",
+      "release": "https://github.com/pomosherry-hue/kids-color/releases/download/v0.25.0/lesson-25.mp4",
+      "lyrics": [],
+      "words": [],
+      "spell": [],
+      "game": false
+    },
+    {
+      "id": "wanzhuan-secai-26",
+      "series": "wanzhuan-secai",
+      "unit": "课",
+      "no": 26,
+      "color": {
+        "en": "Colors",
+        "zh": "",
+        "hex": "#F07B1F"
+      },
+      "title": {
+        "en": "",
+        "zh": "颜色会骗人"
+      },
+      "landscape": false,
+      "duration": 296.7,
+      "video": "series/wanzhuan-secai/26/lesson-26.mp4",
+      "videoWide": "",
+      "audio": "",
+      "cover": "series/wanzhuan-secai/26/cover.jpg",
+      "poster": "series/wanzhuan-secai/26/cover.jpg",
+      "release": "https://github.com/pomosherry-hue/kids-color/releases/download/v0.26.0/lesson-26.mp4",
+      "lyrics": [],
+      "words": [],
+      "spell": [],
+      "game": false
+    },
+    {
+      "id": "wanzhuan-secai-27",
+      "series": "wanzhuan-secai",
+      "unit": "课",
+      "no": 27,
+      "color": {
+        "en": "Colors",
+        "zh": "",
+        "hex": "#F07B1F"
+      },
+      "title": {
+        "en": "",
+        "zh": "背景一换，颜色就变"
+      },
+      "landscape": false,
+      "duration": 335.2,
+      "video": "series/wanzhuan-secai/27/lesson-27.mp4",
+      "videoWide": "",
+      "audio": "",
+      "cover": "series/wanzhuan-secai/27/cover.jpg",
+      "poster": "series/wanzhuan-secai/27/cover.jpg",
+      "release": "https://raw.githubusercontent.com/pomosherry-hue/kids-color/33d97caf003665a91be681d1c6b1c8984fdfbfca/lesson-27.mp4",
+      "lyrics": [],
+      "words": [],
+      "spell": [],
+      "game": false
+    },
+    {
+      "id": "wanzhuan-secai-28",
+      "series": "wanzhuan-secai",
+      "unit": "课",
+      "no": 28,
+      "color": {
+        "en": "Red",
+        "zh": "",
+        "hex": "#E8352E"
+      },
+      "title": {
+        "en": "",
+        "zh": "找出三种不一样的红"
+      },
+      "landscape": false,
+      "duration": 329.9,
+      "video": "series/wanzhuan-secai/28/lesson-28.mp4",
+      "videoWide": "",
+      "audio": "",
+      "cover": "series/wanzhuan-secai/28/cover.jpg",
+      "poster": "series/wanzhuan-secai/28/cover.jpg",
+      "release": "https://github.com/pomosherry-hue/kids-color/releases/download/v0.28.0/lesson-28.mp4",
+      "lyrics": [],
+      "words": [],
+      "spell": [],
+      "game": false
+    },
+    {
+      "id": "wanzhuan-secai-29",
+      "series": "wanzhuan-secai",
+      "unit": "课",
+      "no": 29,
+      "color": {
+        "en": "Colors",
+        "zh": "",
+        "hex": "#F07B1F"
+      },
+      "title": {
+        "en": "",
+        "zh": "窗外出门看颜色"
+      },
+      "landscape": false,
+      "duration": 317.6,
+      "video": "series/wanzhuan-secai/29/lesson-29.mp4",
+      "videoWide": "",
+      "audio": "",
+      "cover": "series/wanzhuan-secai/29/cover.jpg",
+      "poster": "series/wanzhuan-secai/29/cover.jpg",
+      "release": "https://github.com/pomosherry-hue/kids-color/releases/download/v0.29.0/lesson-29.mp4",
+      "lyrics": [],
+      "words": [],
+      "spell": [],
+      "game": false
+    },
+    {
+      "id": "wanzhuan-secai-30",
+      "series": "wanzhuan-secai",
+      "unit": "课",
+      "no": 30,
+      "color": {
+        "en": "Red",
+        "zh": "",
+        "hex": "#E8352E"
+      },
+      "title": {
+        "en": "",
+        "zh": "三种颜色画苹果"
+      },
+      "landscape": false,
+      "duration": 302.4,
+      "video": "series/wanzhuan-secai/30/lesson-30.mp4",
+      "videoWide": "",
+      "audio": "",
+      "cover": "series/wanzhuan-secai/30/cover.jpg",
+      "poster": "series/wanzhuan-secai/30/cover.jpg",
+      "release": "https://github.com/pomosherry-hue/kids-color/releases/download/v0.30.0/lesson-30.mp4",
+      "lyrics": [],
+      "words": [],
+      "spell": [],
+      "game": false
+    },
+    {
+      "id": "wanzhuan-secai-31",
+      "series": "wanzhuan-secai",
+      "unit": "课",
+      "no": 31,
+      "color": {
+        "en": "Blue",
+        "zh": "",
+        "hex": "#2F7DE1"
+      },
+      "title": {
+        "en": "",
+        "zh": "调一盘今天的天空"
+      },
+      "landscape": false,
+      "duration": 303.6,
+      "video": "series/wanzhuan-secai/31/lesson-31.mp4",
+      "videoWide": "",
+      "audio": "",
+      "cover": "series/wanzhuan-secai/31/cover.jpg",
+      "poster": "series/wanzhuan-secai/31/cover.jpg",
+      "release": "https://github.com/pomosherry-hue/kids-color/releases/download/v0.31.0/lesson-31.mp4",
+      "lyrics": [],
+      "words": [],
+      "spell": [],
+      "game": false
+    },
+    {
+      "id": "wanzhuan-secai-32",
+      "series": "wanzhuan-secai",
+      "unit": "课",
+      "no": 32,
+      "color": {
+        "en": "Brown",
+        "zh": "",
+        "hex": "#8B5A2B"
+      },
+      "title": {
+        "en": "",
+        "zh": "调一盘今天的土地"
+      },
+      "landscape": false,
+      "duration": 318.6,
+      "video": "series/wanzhuan-secai/32/lesson-32.mp4",
+      "videoWide": "",
+      "audio": "",
+      "cover": "series/wanzhuan-secai/32/cover.jpg",
+      "poster": "series/wanzhuan-secai/32/cover.jpg",
+      "release": "https://raw.githubusercontent.com/pomosherry-hue/kids-color/33d97caf003665a91be681d1c6b1c8984fdfbfca/lesson-32.mp4",
+      "lyrics": [],
+      "words": [],
+      "spell": [],
+      "game": false
+    },
+    {
+      "id": "wanzhuan-secai-33",
+      "series": "wanzhuan-secai",
+      "unit": "课",
+      "no": 33,
+      "color": {
+        "en": "Colors",
+        "zh": "",
+        "hex": "#F07B1F"
+      },
+      "title": {
+        "en": "",
+        "zh": "给家人画一张色卡"
+      },
+      "landscape": false,
+      "duration": 308.0,
+      "video": "series/wanzhuan-secai/33/lesson-33.mp4",
+      "videoWide": "",
+      "audio": "",
+      "cover": "series/wanzhuan-secai/33/cover.jpg",
+      "poster": "series/wanzhuan-secai/33/cover.jpg",
+      "release": "https://github.com/pomosherry-hue/kids-color/releases/download/v0.33.0/lesson-33.mp4",
+      "lyrics": [],
+      "words": [],
+      "spell": [],
+      "game": false
+    },
+    {
+      "id": "wanzhuan-secai-34",
+      "series": "wanzhuan-secai",
+      "unit": "课",
+      "no": 34,
+      "color": {
+        "en": "Colors",
+        "zh": "",
+        "hex": "#F07B1F"
+      },
+      "title": {
+        "en": "",
+        "zh": "颜色小词典"
+      },
+      "landscape": false,
+      "duration": 281.9,
+      "video": "series/wanzhuan-secai/34/lesson-34.mp4",
+      "videoWide": "",
+      "audio": "",
+      "cover": "series/wanzhuan-secai/34/cover.jpg",
+      "poster": "series/wanzhuan-secai/34/cover.jpg",
+      "release": "https://github.com/pomosherry-hue/kids-color/releases/download/v0.34.0/lesson-34.mp4",
+      "lyrics": [],
+      "words": [],
+      "spell": [],
+      "game": false
+    },
+    {
+      "id": "wanzhuan-secai-35",
+      "series": "wanzhuan-secai",
+      "unit": "课",
+      "no": 35,
+      "color": {
+        "en": "Colors",
+        "zh": "",
+        "hex": "#F07B1F"
+      },
+      "title": {
+        "en": "",
+        "zh": "我和颜色的一天"
+      },
+      "landscape": false,
+      "duration": 306.2,
+      "video": "series/wanzhuan-secai/35/lesson-35.mp4",
+      "videoWide": "",
+      "audio": "",
+      "cover": "series/wanzhuan-secai/35/cover.jpg",
+      "poster": "series/wanzhuan-secai/35/cover.jpg",
+      "release": "https://github.com/pomosherry-hue/kids-color/releases/download/v0.35.0/lesson-35.mp4",
+      "lyrics": [],
+      "words": [],
+      "spell": [],
+      "game": false
+    },
+    {
+      "id": "wanzhuan-secai-36",
+      "series": "wanzhuan-secai",
+      "unit": "课",
+      "no": 36,
+      "color": {
+        "en": "Colors",
+        "zh": "",
+        "hex": "#F07B1F"
+      },
+      "title": {
+        "en": "",
+        "zh": "我的色彩小画展"
+      },
+      "landscape": false,
+      "duration": 290.2,
+      "video": "series/wanzhuan-secai/36/lesson-36.mp4",
+      "videoWide": "",
+      "audio": "",
+      "cover": "series/wanzhuan-secai/36/cover.jpg",
+      "poster": "series/wanzhuan-secai/36/cover.jpg",
+      "release": "https://github.com/pomosherry-hue/kids-color/releases/download/v0.36.0/lesson-36.mp4",
+      "lyrics": [],
+      "words": [],
+      "spell": [],
+      "game": false
+    }
+  ],
+  "extras": [
+    {
+      "en": "apple",
+      "zh": "苹果",
+      "color": {
+        "en": "Red",
+        "zh": "红色",
+        "hex": "#E8352E"
+      },
+      "image": "game/apple.jpg"
+    },
+    {
+      "en": "banana",
+      "zh": "香蕉",
+      "color": {
+        "en": "Yellow",
+        "zh": "黄色",
+        "hex": "#E0A800"
+      },
+      "image": "game/banana.jpg"
+    },
+    {
+      "en": "cloud",
+      "zh": "白云",
+      "color": {
+        "en": "White",
+        "zh": "白色",
+        "hex": "#8FA9C8"
+      },
+      "image": "game/cloud.jpg"
+    }
+  ]
+}
