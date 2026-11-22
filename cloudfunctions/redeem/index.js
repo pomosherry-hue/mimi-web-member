@@ -10,7 +10,7 @@ const lib = require('./lib');
 const app = tcb.init({ env: tcb.SYMBOL_CURRENT_ENV });
 const db = app.database();
 
-// node-sdk 的 doc().get() 返回 { data: [doc] }；事务里返回 { data: doc }。两种都兼容。
+// 用 where 查询（这个环境的数据库实例里 doc(id).get() 会报错）。node-sdk 的 get() 返回 { data: [doc] }；事务里返回 { data: doc }。两种都兼容。
 function one(res) {
   if (!res) return null;
   const d = res.data;
@@ -20,8 +20,13 @@ function one(res) {
 
 async function getDoc(coll, id) {
   try {
-    return one(await db.collection(coll).doc(id).get());
+    const field = coll === config.CODES_COLLECTION ? 'code' : 'key';
+    let res = await db.collection(coll).where({ [field]: id }).limit(1).get();
+    let d = one(res);
+    if (!d && field === 'key') { res = await db.collection(coll).where({ _id: id }).limit(1).get(); d = one(res); }
+    return d;
   } catch (e) {
+    console.error('db read failed', e && e.message);
     return null;
   }
 }
@@ -39,20 +44,20 @@ const deps = {
   getAttempt: (key) => getDoc(config.ATTEMPTS_COLLECTION, key),
   setAttempt: async (key, rec) => {
     try {
-      await db.collection(config.ATTEMPTS_COLLECTION).doc(key).set(stripId(rec));
+      const data = Object.assign(stripId(rec), { key });
+      const u = await db.collection(config.ATTEMPTS_COLLECTION).where({ key }).update(data);
+      if (!u || !u.updated) await db.collection(config.ATTEMPTS_COLLECTION).add(data);
     } catch (e) {
       console.error('setAttempt failed', e && e.message);
     }
   },
   bindDeviceTx: async (code, decide) => {
-    return db.runTransaction(async (tx) => {
-      const ref = tx.collection(config.CODES_COLLECTION).doc(code);
-      const fresh = one(await ref.get());
-      const r = decide(fresh);
-      if (r.error) return { error: r.error };
-      await ref.update(r.patch);
-      return r;
-    });
+    const coll = db.collection(config.CODES_COLLECTION);
+    const fresh = one(await coll.where({ code }).limit(1).get());
+    const r = decide(fresh);
+    if (r.error) return { error: r.error };
+    await coll.where({ code }).update(r.patch);
+    return r;
   },
   tempUrls: async (fileIDs, maxAge) => {
     const res = await app.getTempFileURL({

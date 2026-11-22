@@ -193,20 +193,24 @@ test('IPv6 address becomes a safe document id', () => {
 test('index.js wires @cloudbase/node-sdk correctly (mocked SDK)', async () => {
   const calls = { update: [], set: [], temp: [] };
   const docs = { redeem_codes: { [CODE]: { _id: CODE, code: CODE, status: 'active', boundDevices: [], maxDevices: 2 } }, redeem_attempts: {} };
+  const match = (name, q) => Object.values(docs[name]).filter((d) => Object.keys(q).every((k) => d[k] === q[k]));
   const fakeDb = {
     collection: (name) => ({
-      doc: (id) => ({
-        get: async () => ({ data: docs[name][id] ? [docs[name][id]] : [] }),
-        set: async (data) => { calls.set.push({ name, id, data }); docs[name][id] = data; }
-      })
-    }),
-    runTransaction: async (fn) => fn({
-      collection: (name) => ({
-        doc: (id) => ({
-          get: async () => ({ data: docs[name][id] }),
-          update: async (patch) => { calls.update.push({ name, id, patch }); Object.assign(docs[name][id], patch); }
-        })
-      })
+      where: (q) => {
+        const api = {
+          limit: () => api,
+          get: async () => ({ data: match(name, q) }),
+          update: async (patch) => {
+            const hits = match(name, q);
+            hits.forEach((d) => { Object.assign(d, patch); });
+            if (name === 'redeem_attempts') hits.forEach((d) => calls.set.push({ name, id: d.key, data: patch }));
+            else hits.forEach((d) => calls.update.push({ name, id: d._id, patch }));
+            return { updated: hits.length };
+          }
+        };
+        return api;
+      },
+      add: async (data) => { const id = data.key || ('auto' + Math.random()); calls.set.push({ name, id, data }); docs[name][id] = Object.assign({ _id: id }, data); return { id }; }
     })
   };
   const fakeSdk = {
