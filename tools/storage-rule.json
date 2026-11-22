@@ -1,0 +1,4 @@
+{
+  "read": "/^episodes\\/01-/.test(resource.path) || /^episodes\\/02-/.test(resource.path) || /^episodes\\/03-/.test(resource.path) || /^series\\//.test(resource.path) || /^game\\//.test(resource.path) || /^data\\//.test(resource.path) || /^character\\//.test(resource.path) || /\\.jpg$/.test(resource.path) || /\\.jpeg$/.test(resource.path) || /\\.png$/.test(resource.path) || /\\.webp$/.test(resource.path) || /\\.gif$/.test(resource.path) || /\\.json$/.test(resource.path) || /\\.mp3$/.test(resource.path) || /\\.m4a$/.test(resource.path)",
+  "write": "resource.openid == auth.openid || resource.openid == auth.uid"
+}

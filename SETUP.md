@@ -75,28 +75,65 @@
 3. 控制台「数据库」→ 打开 `redeem_codes` →「导入」→ 选 `.jsonl` 文件。冲突处理选「Insert」（插入）。
    - 【不确定】导入对话框里文件格式选 JSON。如果它不认 `.jsonl` 这个后缀，把文件改名成 `.json` 再试（注意是改 `.jsonl` 的名字，不是用那个 `.json` 数组文件）。
 
-### 第 5 步：把第 4–13 集视频设成私有
-推荐做法（**方案 A**，最稳）：
-1. 「云存储」→「权限设置」→ 选 **「仅创建者可读写」**（或者「自定义安全规则」填 `{"read": false, "write": false}`）。
-2. 这样整个云存储都不能用公开地址打开了。小程序应该不受影响，因为它也是通过云函数 `member` 用管理员身份换临时链接的（改完请打开小程序确认）。
-3. 网站这边：把 `js/config.js` 里的 `MEDIA_BASE` 改成 `''`（空）。这样封面、单词卡和前 3 集就直接从新站的 GitHub Pages 读，不会先等 6 秒再换备份。
-   - ⚠️ 旧站 mimi-web 也是先从云存储读的，改成私有以后旧站会变慢（每个文件先等约 6 秒再换 GitHub 备份），但还能看。
-4. 视频文件**不用挪位置**，还放在原来的 `episodes/04-green/...` 等路径。云函数里 `PRIVATE_DIR` 保持 `''`。
+### 第 5 步：只锁第 4–13 集的视频（推荐做法）
 
-另一种做法（**方案 B**，保留云存储加速）：用「自定义安全规则」，只放开免费内容：
+**效果：** 只有第 4 集起的 mp4 视频不能再用公开地址打开。第 1–3 集、所有封面、单词卡、歌曲 mp3、`data/catalog.json`、玩转色彩 36 课都照旧公开。旧站 mimi-web 不受影响，也不会变慢。
+
+**小程序为什么不受影响：** 官方文档写明「云开发控制台和服务端始终有所有文件读写权限，安全规则仅对客户端（小程序端、Web 等）发起的请求有效」。小程序的会员视频是云函数 `member` 在服务端换的临时链接，新站用的云函数 `redeem` 也一样。我查过小程序代码，前端没有直接读云存储地址，都是通过 `member` 云函数。
+
+**操作步骤：**
+1. 云开发控制台 →「云存储」→「权限设置」。
+2. 选「自定义安全规则」。
+3. 把输入框里原来的内容全部删掉，粘贴下面这段（仓库里 `tools/storage-rule.json` 是同一份）：
+
 ```json
 {
-  "read": "/^episodes\\/0[1-3]-/.test(resource.path) || /^series\\//.test(resource.path) || /^data\\//.test(resource.path) || /\\.(jpg|jpeg|png|webp)$/.test(resource.path)",
-  "write": false
+  "read": "/^episodes\\/01-/.test(resource.path) || /^episodes\\/02-/.test(resource.path) || /^episodes\\/03-/.test(resource.path) || /^series\\//.test(resource.path) || /^game\\//.test(resource.path) || /^data\\//.test(resource.path) || /^character\\//.test(resource.path) || /\\.jpg$/.test(resource.path) || /\\.jpeg$/.test(resource.path) || /\\.png$/.test(resource.path) || /\\.webp$/.test(resource.path) || /\\.gif$/.test(resource.path) || /\\.json$/.test(resource.path) || /\\.mp3$/.test(resource.path) || /\\.m4a$/.test(resource.path)",
+  "write": "resource.openid == auth.openid || resource.openid == auth.uid"
 }
 ```
-- 【不确定】我不确定这套规则管不管 `storage.tcloudbase.com/...` 这种直接网址的访问，文档只说它管「客户端（小程序、Web）发起的请求」。所以改完**一定要自己验一下**（见下面）。
 
-**改完马上验证：** 用手机浏览器打开这个地址：
-`https://cloud1-d2guejnqud92f5860.storage.tcloudbase.com/episodes/04-green/green_episode4_1080x1920_web.mp4`
-- 今天（11 月 22 日）我测过，这个地址**还能直接下载**（返回 200）。
-- 改完以后应该打不开（403 之类）才算成功。
-- 再打开小程序看一集会员集，确认小程序还能正常播放。
+4. 点「保存」。等 1–3 分钟生效。
+
+**这段规则的意思（白名单）：**
+- 文档写明规则**不能取反**（不能写「除了某个文件夹」），也**不能用括号分组**。所以只能反过来写成「下面这些都可以公开读」：
+  - `episodes/01-`、`episodes/02-`、`episodes/03-` 开头的所有文件（免费集，包括视频）
+  - `series/`（玩转色彩）、`game/`、`data/`、`character/` 文件夹里的所有文件
+  - 所有 `.jpg .jpeg .png .webp .gif .json .mp3 .m4a` 文件（所有封面、单词卡、歌曲）
+- 剩下没被列进来的，就是 `episodes/04-…` 到 `episodes/13-…` 里的 **mp4**，于是只有它们被锁住。以后加的第 14 集起的视频也会自动锁住。
+- `write`（写）那一行就是原来默认的「仅创建者可写」，没有变化。
+- 我用小程序目录里的全部 178 个文件路径模拟过这段规则：只有第 4–13 集的 10 个 mp4 被拒绝，其他全部能读。
+
+**可选：** 如果会员集的歌曲 mp3 也想锁，把规则里的 `|| /\\.mp3$/.test(resource.path) || /\\.m4a$/.test(resource.path)` 两段删掉就行。第 1–3 集的歌曲仍然公开，因为它们在 `episodes/01-` 等文件夹里。
+
+**注意：**
+- 文件名后缀要是小写。比如有人上传了 `XXX.JPG`，它不在白名单里，会被锁住。目前目录里全是小写。
+- 云存储里如果还有其他文件夹（不是 episodes / series / game / data / character），里面的非图片文件也会被锁住。请在「云存储」里看一眼最外层有哪些文件夹，有别的就告诉我，我再把它加进规则。
+- 【不确定】文档说安全规则是「传统模式」专有的。如果你的「权限设置」里找不到「自定义安全规则」，说明环境可能是「PG 模式」，要换别的做法（见下面「备选做法」），先别乱改，告诉我。
+- 【不确定】规则保存后，CDN 上可能还缓存着以前下载过的视频，第 4 集的公开地址可能要过一阵子才打不开。
+
+**改完后的检查清单（一项一项打勾）：**
+- □ 打开第 4 集的公开地址，应该**打不开**（403 / 拒绝访问）：
+  `https://cloud1-d2guejnqud92f5860.storage.tcloudbase.com/episodes/04-green/green_episode4_1080x1920_web.mp4`
+  （11 月 22 日我测过，这个地址当时还能直接下载）
+- □ 打开第 1 集的公开地址，应该**还能播**：
+  `https://cloud1-d2guejnqud92f5860.storage.tcloudbase.com/episodes/01-red/red_episode1_final.mp4`
+- □ 打开第 4 集的封面，应该**还能看**：
+  `https://cloud1-d2guejnqud92f5860.storage.tcloudbase.com/episodes/04-green/thumbs/frame01.jpg`
+- □ 旧站 https://pomosherry-hue.github.io/mimi-web/ ：首页封面正常，第 1 集马上能播，不用等。
+  （旧站第 4 集起会先等约 6 秒，再从旧站自己的 GitHub 备份播放。只要旧站开着，会员集还是能免费看，这是预料中的。）
+- □ 小程序：用会员账号打开一集会员集（比如第 4 集），能正常播放。
+- □ 新站 https://pomosherry-hue.github.io/mimi-web-member/ ：第 1 集能播；第 4 集显示锁。做完第 3、4、6 步（导入码、部署云函数）以后，输一个码能播放。
+- 万一哪里坏了：回到「权限设置」，改回原来的「所有用户可读，仅创建者可写」，马上恢复原样。
+
+**这样做时，网站配置不用改：** `js/config.js` 里的 `MEDIA_BASE` 保持原样，封面和第 1–3 集照旧从云存储加速读取。云函数 `redeem` 里的 `PRIVATE_DIR` 保持 `''`，视频不用挪位置。
+
+#### 备选做法（只有在上面的规则用不了时才考虑）
+- **整个云存储设成私有**（「仅创建者可读写」）：最简单，但旧站和新站的封面、第 1–3 集都会先等约 6 秒，再换 GitHub 备份，旧站会明显变慢。新站可以把 `MEDIA_BASE` 改成 `''` 避免等待。
+- **把会员视频挪到单独的文件夹**（比如 `members/episodes/04-green/...`），再用白名单只放开 `episodes/`、`series/` 等文件夹。需要改的地方：
+  - 小程序（mimi-color-songs，这次**没改**）：`data/catalog.json` 里第 4 集起的 `video` 路径要加 `members/` 前缀；`cloudfunctions/member/index.js` 里 `isLockedPath` 的匹配规则也要改，让它认 `members/` 下的路径；改完重新部署 `member`，再上传新的 `catalog.json`。
+  - 新站：`cloudfunctions/redeem/config.js` 里 `PRIVATE_DIR` 改成 `'members/'`，重新部署。
+  - 云存储：把 10 个视频上传到新路径，确认没问题后再删掉旧路径的文件。
 
 ### 第 6 步：部署云函数 `redeem`
 最简单是用微信开发者工具（你部署 `member` 时就是这么做的）：
@@ -141,7 +178,7 @@
   2. **云函数调用次数**：每次打开会员集、每次链接过期续上都算一次，量很小。
   3. **数据库读写**：每次核对码都要读写几次，量很小。
 - 仓库 `mimi-color-songs/web/README.md` 里记着：套餐到 2027-05-20；如果没开按量付费，额度用完可能会**暂停服务**，而不是自动扣钱。上线卖码以后，人一多，记得常去看用量。
-- 如果改成方案 A、封面和前 3 集走 GitHub Pages：GitHub 不收钱，但对流量有软上限，具体以 GitHub 现在的说明为准。
+- 如果用了「备选做法」里的整个云存储私有、封面和前 3 集改走 GitHub Pages：GitHub 不收钱，但对流量有软上限，具体以 GitHub 现在的说明为准。
 
 ---
 
@@ -149,7 +186,7 @@
 
 我**一样都没删**，这些要你决定、你来做（或者你同意后让我做）：
 
-1. **云存储里的第 4–13 集视频**（还有这些集的歌曲 mp3）：现在用公开地址谁都能打开（今天已验证第 4 集能直接下载）。按第三节第 5 步改权限。
+1. **云存储里的第 4–13 集视频**：现在用公开地址谁都能打开（11 月 22 日已验证第 4 集能直接下载）。按第三节第 5 步加安全规则，只锁这 10 个视频，其他照旧公开。
 2. **旧站 mimi-web 仓库里的第 4–13 集 mp4**，一共 10 个文件（新站 mimi-web-member 里没有这些文件）。只要旧站还开着，会员集就还能免费下载，兑换码挡不住；等你决定关掉旧站时再处理：
    `episodes/04-green/` 到 `episodes/13-mixing/` 下面的 `*_web.mp4`。
    - 网站 `pomosherry-hue.github.io/mimi-web/episodes/04-green/...mp4` 现在能直接下载（今天已验证）。
