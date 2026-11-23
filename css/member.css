@@ -14,6 +14,39 @@
 .redeem-input:focus { outline: none; border-color: var(--c); }
 .redeem-msg { min-height: 1.6em; font-weight: 700; color: var(--ink); }
 .lock-buy { font-size: 14px; }
+
+.buy-block {
+  margin: 18px 0 0; padding: 16px 8px 4px;
+  border-top: 1px dashed var(--line);
+  text-align: center;
+}
+.buy-price {
+  margin: 0 0 14px; font-size: 20px; font-weight: 800; color: var(--ink);
+}
+.buy-qrs {
+  display: flex; gap: 16px; justify-content: center; align-items: flex-start;
+}
+.buy-qr {
+  flex: 1 1 0; max-width: 240px; min-width: 0;
+  text-decoration: none; color: inherit;
+}
+.buy-qr img {
+  width: 100%; height: auto; display: block;
+  border-radius: 14px; border: 1px solid var(--line); background: #fff;
+  box-shadow: var(--shadow);
+}
+.buy-qr-cap {
+  display: block; margin-top: 8px; font-size: 13px; color: var(--muted);
+}
+.buy-step, .buy-note {
+  margin: 8px auto 0; max-width: 28em; font-size: 14px; color: var(--muted);
+  text-align: left; line-height: 1.55;
+}
+.buy-note { margin-top: 6px; }
+@media (max-width: 520px) {
+  .buy-qrs { flex-direction: column; align-items: center; }
+  .buy-qr { width: min(280px, 100%); max-width: 280px; flex: none; }
+}
 .card .locked { color: #9a6b1f; font-weight: 700; }
 .swatch .lock-badge {
   position: absolute; right: 8px; top: 8px; z-index: 2;

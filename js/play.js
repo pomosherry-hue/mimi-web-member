@@ -122,7 +122,10 @@
       }
     }
     bits += ' · <button type="button" id="change-code">换一个兑换码</button>';
-    return '<div class="member-bar">' + bits + '</div>';
+    var html = '<div class="member-bar">' + bits + '</div>';
+    // 快到期时在播放器附近放出购买 / 续费说明
+    if (info && info.warn && MB.buyBlockHtml) html += MB.buyBlockHtml();
+    return html;
   }
 
   function renderPage() {

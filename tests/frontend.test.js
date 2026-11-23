@@ -106,6 +106,17 @@ test('member episode without code shows lock; wrong code shows error; right code
   await tick();
   assert.ok(doc.querySelector('.lock-panel'), 'lock panel shown');
   assert.equal(doc.getElementById('player'), null);
+  const buy = doc.querySelector('.buy-block');
+  assert.ok(buy, 'purchase block on lock screen');
+  assert.match(buy.textContent, /会员一年 ¥99/);
+  assert.match(buy.textContent, /扫左边收款码付款，备注里填你的微信号/);
+  assert.match(buy.textContent, /加咪咪微信：Pomosherry/);
+  assert.match(buy.textContent, /收到付款后会把兑换码发给你；续费也一样/);
+  assert.equal(buy.querySelectorAll('img').length, 2);
+  const hrefs = [...buy.querySelectorAll('a.buy-qr')].map((a) => a.getAttribute('href'));
+  assert.deepEqual(hrefs, ['img/pay-wechat.jpg', 'img/wechat-contact.jpg']);
+  assert.ok(hrefs.every((_, i) => buy.querySelectorAll('a.buy-qr')[i].getAttribute('target') === '_blank'));
+  assert.doesNotMatch(doc.body.textContent, /小红书/);
   const input = doc.querySelector('.redeem-input');
   const form = doc.querySelector('.redeem-form');
   input.value = 'mw-zzzz-zzzz-zzzz';
@@ -122,6 +133,8 @@ test('member episode without code shows lock; wrong code shows error; right code
   assert.equal(w.localStorage.getItem('mimi_redeem_code'), 'MWABCDEFGHJKMN');
   assert.equal(w.localStorage.getItem('mimi_member_expires_at'), String(FAR_EXP));
   assert.match(doc.body.textContent, /会员有效期至 2027-11-22/);
+  assert.equal(doc.querySelector('.buy-block'), null, 'no renewal block when expiry is far away');
+  assert.doesNotMatch(doc.body.textContent, /小红书/);
   const call = log.filter((l) => l[0] === 'call').pop();
   assert.equal(call[1], 'redeem');
   assert.equal(call[2].episodeId, '04-green');
@@ -172,6 +185,9 @@ test('within 30 days of expiry: gentle notice is shown near the player', async (
   assert.match(doc.body.textContent, /会员还有 10 天到期/);
   assert.match(doc.body.textContent, /会员有效期至 /);
   assert.ok(doc.querySelector('.member-expiry-warn'));
+  assert.ok(doc.querySelector('.buy-block'), 'renewal block when expiring soon');
+  assert.match(doc.querySelector('.buy-block').textContent, /会员一年 ¥99/);
+  assert.match(doc.querySelector('.buy-block').textContent, /续费也一样/);
   assert.equal(w.localStorage.getItem('mimi_member_expires_at'), String(exp));
 });
 
@@ -183,6 +199,9 @@ test('locally expired membership clears the code and shows the lock with EXPIRED
   await tick(50);
   assert.ok(doc.querySelector('.lock-panel'));
   assert.match(doc.querySelector('.redeem-msg').textContent, /已经到期/);
+  assert.match(doc.querySelector('.redeem-msg').textContent, /请联系咪咪续费/);
+  assert.ok(doc.querySelector('.buy-block'), 'renewal block alongside expired message');
+  assert.match(doc.querySelector('.buy-block').textContent, /会员一年 ¥99/);
   assert.equal(w.localStorage.getItem('mimi_redeem_code'), null);
   assert.equal(w.localStorage.getItem('mimi_member_expires_at'), null);
   assert.equal(log.filter((l) => l[0] === 'call').length, 0, 'should not call cloud function when expired locally');

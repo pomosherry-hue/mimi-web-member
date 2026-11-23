@@ -173,6 +173,33 @@
     return String(s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
   }
 
+  // 购买 / 续费说明：收款码 + 加微信。锁住、到期、快到期时都会用到。
+  function buyBlockHtml() {
+    var c = cfg();
+    var price = c.PRICE_TEXT || '会员一年 ¥99';
+    var wechat = c.WECHAT_ID || 'Pomosherry';
+    var pay = c.PAY_IMG || 'img/pay-wechat.jpg';
+    var contact = c.CONTACT_IMG || 'img/wechat-contact.jpg';
+    return (
+      '<div class="buy-block">' +
+        '<p class="buy-price">' + escapeHtml(price) + '</p>' +
+        '<div class="buy-qrs">' +
+          '<a class="buy-qr" href="' + escapeHtml(pay) + '" target="_blank" rel="noopener">' +
+            '<img src="' + escapeHtml(pay) + '" alt="微信收款码，点开后可长按识别">' +
+            '<span class="buy-qr-cap">微信收款码</span>' +
+          '</a>' +
+          '<a class="buy-qr" href="' + escapeHtml(contact) + '" target="_blank" rel="noopener">' +
+            '<img src="' + escapeHtml(contact) + '" alt="加咪咪微信 ' + escapeHtml(wechat) + '，点开后可长按识别">' +
+            '<span class="buy-qr-cap">加咪咪微信</span>' +
+          '</a>' +
+        '</div>' +
+        '<p class="buy-step">① 扫左边收款码付款，备注里填你的微信号</p>' +
+        '<p class="buy-step">② 或加咪咪微信：' + escapeHtml(wechat) + '（扫右边二维码）</p>' +
+        '<p class="buy-note">收到付款后会把兑换码发给你；续费也一样</p>' +
+      '</div>'
+    );
+  }
+
   // 播放页上的锁 + 输入框。onUnlocked(result) 在兑换成功后调用。
   function renderLock(container, ep, onUnlocked, presetMsg) {
     var free = Number(cfg().FREE_EPISODES) || 3;
@@ -187,7 +214,7 @@
           '<button class="bigbtn" type="submit">解锁</button>' +
         '</form>' +
         '<div class="redeem-msg" role="status"></div>' +
-        (cfg().BUY_TEXT ? '<p class="lock-buy">' + escapeHtml(cfg().BUY_TEXT) + '</p>' : '') +
+        buyBlockHtml() +
       '</div>';
     var form = container.querySelector('form');
     var input = container.querySelector('.redeem-input');
@@ -226,6 +253,7 @@
     normalize: normalize,
     urlsFor: urlsFor,
     redeem: redeem,
-    renderLock: renderLock
+    renderLock: renderLock,
+    buyBlockHtml: buyBlockHtml
   };
 })(window);

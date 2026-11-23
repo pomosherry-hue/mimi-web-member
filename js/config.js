@@ -26,6 +26,9 @@ window.MIMI_CONFIG = {
     FREE_EPISODES: 3,
     SERIES: ['mimi-songs'],   // 只锁咪咪色彩英语；玩转色彩仍然全部免费
     REDEEM_FN: 'redeem',
-    BUY_TEXT: '兑换码可以在小红书 / 微信私信咪咪购买。'
+    PRICE_TEXT: '会员一年 ¥99',
+    WECHAT_ID: 'Pomosherry',
+    PAY_IMG: 'img/pay-wechat.jpg',
+    CONTACT_IMG: 'img/wechat-contact.jpg'
   }
 };
