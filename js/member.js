@@ -2,6 +2,9 @@
 (function (w) {
   var LS_CODE = 'mimi_redeem_code';
   var LS_DEVICE = 'mimi_device_id';
+  var LS_EXPIRES = 'mimi_member_expires_at';
+  var REMIND_DAYS = 30;
+  var EXPIRED_MSG = '这个兑换码已经到期（自首次兑换起一年），请联系咪咪续费';
   var urlCache = {}; // episodeId -> { urls, exp }
   var appPromise = null;
 
@@ -54,9 +57,48 @@
       .toUpperCase().replace(/[^A-Z0-9]/g, '');
   }
 
+  function getExpiresAt() {
+    var n = Number(ls(LS_EXPIRES));
+    return n > 0 ? n : 0;
+  }
+  function setExpiresAt(ms) {
+    if (ms) ls(LS_EXPIRES, String(ms));
+    else ls(LS_EXPIRES, null);
+  }
+  function isExpiredLocally(now) {
+    var exp = getExpiresAt();
+    return !!(exp && (now || Date.now()) > exp);
+  }
+  function formatExpiryDate(ms) {
+    var d = new Date(ms);
+    var m = d.getMonth() + 1;
+    var day = d.getDate();
+    return d.getFullYear() + '-' + (m < 10 ? '0' : '') + m + '-' + (day < 10 ? '0' : '') + day;
+  }
+  // 给播放页用：有本地到期日后返回 { at, date, daysLeft, expired, warn }
+  function expiryInfo(now) {
+    var exp = getExpiresAt();
+    if (!exp) return null;
+    now = now || Date.now();
+    var left = exp - now;
+    var days = Math.ceil(left / 86400000);
+    return {
+      at: exp,
+      date: formatExpiryDate(exp),
+      daysLeft: days,
+      expired: left < 0,
+      warn: left >= 0 && days <= REMIND_DAYS
+    };
+  }
+  function rememberExpiry(r) {
+    if (!r || !r.ok) return;
+    if (r.memberExpiresAt) setExpiresAt(r.memberExpiresAt);
+    else setExpiresAt(null);
+  }
+
   function getCode() { return ls(LS_CODE); }
   function setCode(c) { ls(LS_CODE, normalize(c)); }
-  function clearCode() { ls(LS_CODE, null); urlCache = {}; }
+  function clearCode() { ls(LS_CODE, null); setExpiresAt(null); urlCache = {}; }
 
   function getApp() {
     if (appPromise) return appPromise;
@@ -86,9 +128,12 @@
       });
     }).then(function (res) {
       var r = (res && res.result) || {};
-      if (r.ok && r.urls && episodeId) {
-        // 提前 60 秒当作过期
-        urlCache[episodeId] = { urls: r.urls, exp: (r.urlExpiresAt || (Date.now() + 540000)) - 60000 };
+      if (r.ok) {
+        rememberExpiry(r);
+        if (r.urls && episodeId) {
+          // 提前 60 秒当作过期
+          urlCache[episodeId] = { urls: r.urls, exp: (r.urlExpiresAt || (Date.now() + 540000)) - 60000 };
+        }
       }
       return r;
     }, function (err) {
@@ -99,6 +144,10 @@
 
   // 拿某一集的会员链接；force = true 时忽略缓存（链接过期后用）
   function urlsFor(ep, force) {
+    if (isExpiredLocally()) {
+      clearCode();
+      return Promise.resolve({ ok: false, code: 'EXPIRED', message: EXPIRED_MSG });
+    }
     var code = getCode();
     if (!code) return Promise.resolve({ ok: false, code: 'NO_CODE' });
     var c = urlCache[ep.id];
@@ -170,6 +219,10 @@
     getCode: getCode,
     setCode: setCode,
     clearCode: clearCode,
+    getExpiresAt: getExpiresAt,
+    isExpiredLocally: isExpiredLocally,
+    expiryInfo: expiryInfo,
+    formatExpiryDate: formatExpiryDate,
     normalize: normalize,
     urlsFor: urlsFor,
     redeem: redeem,

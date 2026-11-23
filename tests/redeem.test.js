@@ -71,8 +71,11 @@ test('success: binds device and returns short-lived temp URL for the member epis
   assert.equal(r.urlExpiresAt, state.now + 600_000);
   assert.equal(state.tempCalls[0].ids[0], realConfig.MEDIA_PREFIX + key);
   assert.equal(state.codes.get(CODE).boundDevices.length, 1);
+  assert.equal(state.codes.get(CODE).firstUsedAt, state.now);
   assert.equal(r.devicesUsed, 1);
   assert.equal(r.maxDevices, 2);
+  assert.equal(r.memberExpiresAt, state.now + 365 * 86400000);
+  assert.equal(realConfig.VALID_DAYS, 365);
 });
 
 test('same device again does not use another slot', async () => {
@@ -188,6 +191,60 @@ test('BAD_FORMAT does not count as a failed attempt', async () => {
 test('IPv6 address becomes a safe document id', () => {
   const keys = lib.rateKeys({ uid: 'u', deviceId: dev(1), ip: '2001:db8::1' });
   keys.forEach((k) => assert.match(k, /^[A-Za-z0-9_-]+$/));
+});
+
+
+test('default VALID_DAYS 365 starts at firstUsedAt and stays on later redeem', async () => {
+  const { deps, state } = makeDeps();
+  addCode(state); // 库里已有的码没有 validDays / expiresAt
+  const firstNow = state.now;
+  const r = await lib.handle({ code: CODE, deviceId: dev(1) }, ctx, deps);
+  assert.equal(r.ok, true, JSON.stringify(r));
+  assert.equal(r.memberExpiresAt, firstNow + 365 * 86400000);
+  assert.equal(state.codes.get(CODE).firstUsedAt, firstNow);
+  state.now += 10 * 86400000;
+  const r2 = await lib.handle({ code: CODE, deviceId: dev(1), episodeId: '04-green' }, ctx, deps);
+  assert.equal(r2.ok, true, JSON.stringify(r2));
+  assert.equal(state.codes.get(CODE).firstUsedAt, firstNow);
+  assert.equal(r2.memberExpiresAt, firstNow + 365 * 86400000);
+});
+
+test('validDays on the code overrides the default', async () => {
+  const { deps, state } = makeDeps();
+  addCode(state, { validDays: 30 });
+  const r = await lib.handle({ code: CODE, deviceId: dev(1) }, ctx, deps);
+  assert.equal(r.ok, true);
+  assert.equal(r.memberExpiresAt, state.now + 30 * 86400000);
+  addCode(state, { validDays: 0, firstUsedAt: state.now - 400 * 86400000 });
+  const forever = await lib.handle({ code: CODE, deviceId: dev(1) }, ctx, deps);
+  assert.equal(forever.ok, true, JSON.stringify(forever));
+  assert.equal(forever.memberExpiresAt, null);
+});
+
+test('expired after firstUsedAt + validDays is rejected with EXPIRED', async () => {
+  const { deps, state } = makeDeps();
+  addCode(state, { firstUsedAt: state.now - 366 * 86400000 });
+  const r = await lib.handle({ code: CODE, deviceId: dev(1) }, ctx, deps);
+  assert.equal(r.code, 'EXPIRED');
+  assert.match(r.message, /已经到期/);
+  assert.match(r.message, /首次兑换/);
+  addCode(state, { firstUsedAt: state.now - 364 * 86400000 });
+  assert.equal((await lib.handle({ code: CODE, deviceId: dev(1) }, ctx, deps)).ok, true);
+});
+
+test('effective expiry is the earlier of firstUsedAt+validDays and expiresAt', async () => {
+  const { deps, state } = makeDeps();
+  addCode(state, { firstUsedAt: state.now - 10 * 86400000, expiresAt: state.now + 5 * 86400000 });
+  let r = await lib.handle({ code: CODE, deviceId: dev(1) }, ctx, deps);
+  assert.equal(r.ok, true);
+  assert.equal(r.memberExpiresAt, state.now + 5 * 86400000);
+  addCode(state, { firstUsedAt: state.now - 20 * 86400000, expiresAt: state.now + 400 * 86400000, validDays: 30 });
+  r = await lib.handle({ code: CODE, deviceId: dev(1) }, ctx, deps);
+  assert.equal(r.ok, true);
+  assert.equal(r.memberExpiresAt, state.now - 20 * 86400000 + 30 * 86400000);
+  addCode(state, { firstUsedAt: state.now - 40 * 86400000, expiresAt: state.now + 100000, validDays: 30 });
+  r = await lib.handle({ code: CODE, deviceId: dev(1) }, ctx, deps);
+  assert.equal(r.code, 'EXPIRED');
 });
 
 test('index.js wires @cloudbase/node-sdk correctly (mocked SDK)', async () => {

@@ -17,7 +17,7 @@ const MESSAGES = {
   AUTH_REQUIRED: '登录状态失效，请刷新页面再试',
   NOT_FOUND: '没有找到这个兑换码，请检查是否输错',
   DISABLED: '这个兑换码已停用，请联系卖家',
-  EXPIRED: '这个兑换码已过期',
+  EXPIRED: '这个兑换码已经到期（自首次兑换起一年），请联系咪咪续费',
   DEVICE_LIMIT: '这个兑换码已经在其他设备上使用，达到设备上限',
   RATE_LIMITED: '输错次数太多，请稍后再试',
   BAD_EPISODE: '这一集不需要兑换码，或者没有这一集',
@@ -56,11 +56,36 @@ function toMs(v) {
   return isNaN(t) ? 0 : t;
 }
 
+// 有效天数：记录上的 validDays 优先；没写则用配置默认（365）。
+// validDays 为 0 表示不按天数过期（仍尊重 expiresAt 固定截止日期）。
+function validDaysOf(doc, cfg) {
+  if (doc && doc.validDays != null && doc.validDays !== '') {
+    const n = Number(doc.validDays);
+    if (!isNaN(n) && n >= 0) return n;
+  }
+  const d = cfg && Number(cfg.VALID_DAYS);
+  return d > 0 ? d : 0;
+}
+
+// 实际到期时间（毫秒）。从未兑换且没有 expiresAt 时返回 null（首次兑换后才起算）。
+// firstUsedFallback：本次刚写入的 firstUsedAt，成功响应里用来算出 memberExpiresAt。
+function effectiveExpiry(doc, cfg, firstUsedFallback) {
+  if (!doc) return null;
+  const dates = [];
+  const hard = toMs(doc.expiresAt);
+  if (hard) dates.push(hard);
+  const days = validDaysOf(doc, cfg);
+  const first = toMs(doc.firstUsedAt) || toMs(firstUsedFallback) || 0;
+  if (days > 0 && first) dates.push(first + days * 86400000);
+  if (!dates.length) return null;
+  return Math.min.apply(null, dates);
+}
+
 // 码本身的状态检查（不含设备）
-function checkCodeDoc(doc, now) {
+function checkCodeDoc(doc, now, cfg) {
   if (!doc) return 'NOT_FOUND';
   if (doc.status && doc.status !== 'active') return 'DISABLED';
-  const exp = toMs(doc.expiresAt);
+  const exp = effectiveExpiry(doc, cfg);
   if (exp && now > exp) return 'EXPIRED';
   return null;
 }
@@ -149,7 +174,7 @@ async function handle(event, ctx, deps) {
 
   // 2. 查码
   const doc = await deps.getCode(code);
-  const bad = checkCodeDoc(doc, now);
+  const bad = checkCodeDoc(doc, now, cfg);
   if (bad === 'NOT_FOUND') {
     for (const k of keys) await deps.setAttempt(k, nextFailRecord(recs[k], now, cfg.RATE_LIMIT));
     return fail('NOT_FOUND');
@@ -158,7 +183,7 @@ async function handle(event, ctx, deps) {
 
   // 3. 绑定设备（事务里再读一次，防止两台设备同时抢最后一个名额）
   const r = await deps.bindDeviceTx(code, (fresh) => {
-    const again = checkCodeDoc(fresh, now);
+    const again = checkCodeDoc(fresh, now, cfg);
     if (again) return { error: again };
     const b = bindDevice(fresh, deviceId, cfg.DEFAULT_MAX_DEVICES, now);
     if (b.error) return { error: b.error };
@@ -169,12 +194,14 @@ async function handle(event, ctx, deps) {
   });
   if (r.error) return fail(r.error);
 
+  const firstUsed = toMs(doc.firstUsedAt) || (r.patch && r.patch.firstUsedAt) || now;
   const result = {
     ok: true,
     code: 'OK',
     message: MESSAGES.OK,
     displayCode: formatCode(code),
     expiresAt: toMs(doc.expiresAt) || null,
+    memberExpiresAt: effectiveExpiry(Object.assign({}, doc, r.patch || {}), cfg, firstUsed),
     devicesUsed: r.devices.length,
     maxDevices: r.max
   };
@@ -198,6 +225,6 @@ async function handle(event, ctx, deps) {
 
 module.exports = {
   ALPHABET, CODE_PREFIX, CODE_BODY_LEN, MESSAGES,
-  normalizeCode, isValidCode, formatCode, checkCodeDoc, bindDevice,
+  normalizeCode, isValidCode, formatCode, validDaysOf, effectiveExpiry, checkCodeDoc, bindDevice,
   rateKeys, nextFailRecord, lockedFor, handle, fail
 };

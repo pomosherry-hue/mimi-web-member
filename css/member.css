@@ -21,3 +21,4 @@
 }
 .member-bar { font-size: 13px; color: var(--muted); margin: 6px 0; }
 .member-bar button { font-size: 13px; background: none; border: 0; color: var(--muted); text-decoration: underline; cursor: pointer; }
+.member-expiry-warn { color: #9a6b1f; font-weight: 700; }

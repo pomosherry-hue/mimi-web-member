@@ -40,6 +40,7 @@ function open(page, query, handler, opts) {
   const log = [];
   w.cloudbase = fakeCloudbase(handler || (() => ({ ok: false, code: 'NOT_FOUND', message: 'x' })), log);
   if (opts.code) w.localStorage.setItem('mimi_redeem_code', opts.code);
+  if (opts.expiresAt != null) w.localStorage.setItem('mimi_member_expires_at', String(opts.expiresAt));
   const list = SCRIPTS.concat(page === 'index.html' ? ['js/home.js'] : ['js/play.js']);
   list.forEach((f) => w.eval(fs.readFileSync(path.join(SITE, f), 'utf8')));
   return { w, log, doc: w.document };
@@ -48,11 +49,13 @@ function open(page, query, handler, opts) {
 const tick = (ms) => new Promise((r) => setTimeout(r, ms || 20));
 const GREEN = 'episodes/04-green/green_episode4_1080x1920_web.mp4';
 
+const FAR_EXP = new Date(2027, 10, 22, 12, 0, 0).getTime(); // 本地 2027-11-22
+
 function okHandler(data) {
   if (data.code !== 'MWABCDEFGHJKMN') return { ok: false, code: 'NOT_FOUND', message: '没有找到这个兑换码，请检查是否输错' };
   const urls = {};
   if (data.episodeId === '04-green') urls[GREEN] = 'https://tmp.example/green.mp4?sign=1';
-  return { ok: true, code: 'OK', urls, urlExpiresAt: Date.now() + 600000 };
+  return { ok: true, code: 'OK', urls, urlExpiresAt: Date.now() + 600000, memberExpiresAt: FAR_EXP };
 }
 
 test('media helpers: member videos have no public/cloud/GitHub URL; free ones unchanged', () => {
@@ -117,6 +120,8 @@ test('member episode without code shows lock; wrong code shows error; right code
   assert.ok(v, 'player rendered');
   assert.equal(v.getAttribute('src'), 'https://tmp.example/green.mp4?sign=1');
   assert.equal(w.localStorage.getItem('mimi_redeem_code'), 'MWABCDEFGHJKMN');
+  assert.equal(w.localStorage.getItem('mimi_member_expires_at'), String(FAR_EXP));
+  assert.match(doc.body.textContent, /会员有效期至 2027-11-22/);
   const call = log.filter((l) => l[0] === 'call').pop();
   assert.equal(call[1], 'redeem');
   assert.equal(call[2].episodeId, '04-green');
@@ -156,3 +161,30 @@ test('network failure keeps the saved code', async () => {
   assert.match(doc.querySelector('.redeem-msg').textContent, /网络/);
   assert.equal(w.localStorage.getItem('mimi_redeem_code'), 'MWABCDEFGHJKMN');
 });
+
+test('within 30 days of expiry: gentle notice is shown near the player', async () => {
+  const exp = Date.now() + 10 * 86400000 - 60000;
+  const { doc, w } = open('play.html', '?id=04-green', (data) => {
+    return { ok: true, code: 'OK', urls: { [GREEN]: 'https://tmp.example/green.mp4?sign=1' }, urlExpiresAt: Date.now() + 600000, memberExpiresAt: exp };
+  }, { code: 'MWABCDEFGHJKMN' });
+  await tick(50);
+  assert.ok(doc.getElementById('player'));
+  assert.match(doc.body.textContent, /会员还有 10 天到期/);
+  assert.match(doc.body.textContent, /会员有效期至 /);
+  assert.ok(doc.querySelector('.member-expiry-warn'));
+  assert.equal(w.localStorage.getItem('mimi_member_expires_at'), String(exp));
+});
+
+test('locally expired membership clears the code and shows the lock with EXPIRED message', async () => {
+  const { w, doc, log } = open('play.html', '?id=04-green', okHandler, {
+    code: 'MWABCDEFGHJKMN',
+    expiresAt: Date.now() - 1000
+  });
+  await tick(50);
+  assert.ok(doc.querySelector('.lock-panel'));
+  assert.match(doc.querySelector('.redeem-msg').textContent, /已经到期/);
+  assert.equal(w.localStorage.getItem('mimi_redeem_code'), null);
+  assert.equal(w.localStorage.getItem('mimi_member_expires_at'), null);
+  assert.equal(log.filter((l) => l[0] === 'call').length, 0, 'should not call cloud function when expired locally');
+});
+

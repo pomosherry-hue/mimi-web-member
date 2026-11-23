@@ -18,6 +18,12 @@ module.exports = {
   // 一个码默认最多绑定几台设备（码里单独写了 maxDevices 就以码为准）
   DEFAULT_MAX_DEVICES: 2,
 
+  // 默认有效期：从该码第一次成功兑换（firstUsedAt）起算的天数。
+  // 库里已有的码没有 validDays 字段，也会用这个默认值，不用重新导入。
+  // 某个码想改天数，在那条记录里加 validDays（正整数）；想不过期，设 validDays 为 0。
+  // 如果同时还写了 expiresAt（固定截止日期），以较早的那个为准。
+  VALID_DAYS: 365,
+
   // 临时播放链接有效期（秒）。过期后网页会自动再要一次。
   TEMP_URL_MAX_AGE: 600,
 

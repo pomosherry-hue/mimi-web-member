@@ -110,6 +110,21 @@
     });
   }
 
+  function memberBarHtml() {
+    if (!(locked && MB && MB.getCode && MB.getCode())) return '';
+    var bits = '已用兑换码解锁';
+    var info = MB.expiryInfo && MB.expiryInfo();
+    if (info && !info.expired) {
+      bits += ' · 会员有效期至 ' + escapeHtml(info.date);
+      if (info.warn) {
+        var warn = info.daysLeft <= 0 ? '会员今天到期' : ('会员还有 ' + info.daysLeft + ' 天到期');
+        bits += ' · <span class="member-expiry-warn">' + escapeHtml(warn) + '</span>';
+      }
+    }
+    bits += ' · <button type="button" id="change-code">换一个兑换码</button>';
+    return '<div class="member-bar">' + bits + '</div>';
+  }
+
   function renderPage() {
   var posterPath = ep.poster || ep.cover || '';
   var poster = posterPath ? M.mediaUrl(posterPath) : '';
@@ -181,9 +196,7 @@
     '</div>' +
     wideBtn +
     '<div class="media-error" id="media-error" hidden></div>' +
-    (locked && MB.getCode()
-      ? '<div class="member-bar">已用兑换码解锁 · <button type="button" id="change-code">换一个兑换码</button></div>'
-      : '') +
+    memberBarHtml() +
     wordsHtml +
     lyricsHtml +
     nextHtml;
